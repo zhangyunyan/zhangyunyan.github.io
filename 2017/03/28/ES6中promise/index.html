@@ -14,12 +14,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/28/ES6中promise/index.html">
 <meta property="og:site_name" content="zhangyy">
 <meta property="og:description" content="什么是PromisePromise是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6将其写进了语言标准，统一了用法，原生提供了Promise对象。">
-<meta property="og:image" content="http://yoursite.com/../../../img/promise.png">
-<meta property="og:updated_time" content="2017-03-28T08:38:09.981Z">
+<meta property="og:image" content="http://yoursite.com/../../../../img/promise.png">
+<meta property="og:updated_time" content="2017-03-28T08:43:53.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6的promise">
 <meta name="twitter:description" content="什么是PromisePromise是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6将其写进了语言标准，统一了用法，原生提供了Promise对象。">
-<meta name="twitter:image" content="http://yoursite.com/../../../img/promise.png">
+<meta name="twitter:image" content="http://yoursite.com/../../../../img/promise.png">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -182,7 +182,7 @@
 
         
         <a href="/2017/03/28/ES6中promise/" class="archive-article-date">
-  	<time datetime="2017-03-28T08:38:09.980Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
+  	<time datetime="2017-03-28T08:43:53.899Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
         
       </header>
@@ -194,7 +194,7 @@
 <h3 id="Promise对象有以下两个特点。"><a href="#Promise对象有以下两个特点。" class="headerlink" title="Promise对象有以下两个特点。"></a>Promise对象有以下两个特点。</h3><p>（1）对象的状态不受外界影响。Promise对象代表一个异步操作，有三种状态：<br>等待态（Pending）、执行态（Fulfilled）和拒绝态（Rejected）。只有异步操作的结果，可以决定当前是哪一种状态，任何其他操作都无法改变这个状态</p>
 <p>（2）一旦状态改变，就不会再变，任何时候都可以得到这个结果。Promise对象的状态改变，只有两种可能：从Pending变为Resolved和从Pending变为Rejected。只要这两种情况发生，状态就凝固了，不会再变了，会一直保持这个结果。就算改变已经发生了，你再对Promise对象添加回调函数，也会立即得到这个结果。这与事件（Event）完全不同，事件的特点是，如果你错过了它，再去监听，是得不到结果的。</p>
 <h3 id="ES6中的Promise"><a href="#ES6中的Promise" class="headerlink" title="ES6中的Promise"></a>ES6中的Promise</h3><p>先在控制台打印出Promise看看，console.dir(Promise);<br>显示如下;</p>
-<p><img src="../../../img/promise.png" alt="text"></p>
+<p><img src="../../../../img/promise.png" alt="Alt text" title="Optional title"></p>
 <p>由上图可知，Promise是一个函数，自己身上有all、race、reject、resolve等方法，原型上有then、catch等方法</p>
 <p>ES6规定，Promise对象是一个构造函数，用来生成Promise实例。</p>
 <p>Promise的构造函数接收一个参数，是函数，并且传入两个参数：resolve，reject，分别表示异步操作执行成功后的回调函数和异步操作执行失败后的回调函数。其实这里用“成功”和“失败”来描述并不准确，按照标准来讲，resolve是将Promise的状态置为fullfiled，reject是将Promise的状态置为rejected</p>
@@ -277,18 +277,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/28/ES6新特性/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ES6新特性
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/28/markdown使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">markdown使用</div>
+    <a href="/2017/03/28/ES6新特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6新特性</div>
       <i class="icon-circle-right"></i>
     </a>
   
