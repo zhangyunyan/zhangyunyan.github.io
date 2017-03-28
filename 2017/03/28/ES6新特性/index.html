@@ -6,14 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>zhangyy</title>
+  <title>ES6新特性 | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangyy">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+  <meta name="description" content="一、作用域
+
+块级作用域
+块级变量let
+块级常量 const">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6新特性">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/ES6新特性/index.html">
 <meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="一、作用域
+
+块级作用域
+块级变量let
+块级常量 const">
+<meta property="og:updated_time" content="2017-03-28T08:38:29.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="ES6新特性">
+<meta name="twitter:description" content="一、作用域
+
+块级作用域
+块级变量let
+块级常量 const">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -163,147 +179,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-gulp" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-ES6新特性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/17/gulp/">gulp</a>
+    <h1 class="article-title" itemprop="name">
+      ES6新特性
     </h1>
   
 
         
-        <a href="/2016/11/17/gulp/" class="archive-article-date">
-  	<time datetime="2016-11-16T17:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-11-17</time>
+        <a href="/2017/03/28/ES6新特性/" class="archive-article-date">
+  	<time datetime="2017-03-28T08:38:29.235Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm install //项目依赖和安装依赖都安装</div><div class="line">npm install production //只安装项目依赖</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2016/11/17/gulp/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/11/17/gulp/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-jQuery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/17/jQuery/">jQuery</a>
-    </h1>
-  
-
-        
-        <a href="/2016/04/17/jQuery/" class="archive-article-date">
-  	<time datetime="2016-04-16T17:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h2><ul>
-<li>找到所有p元素，并且这些元素都为div元素的子元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&gt;p&quot;)</div></pre></td></tr></table></figure>
+        <p>一、作用域</p>
+<ul>
+<li>块级作用域</li>
+<li>块级变量let</li>
+<li>块级常量 const</li>
+</ul>
+<a id="more"></a>
+<p>二、箭头函数</p>
+<ul>
+<li>sum = (a,b)=&gt; a + b</li>
+<li>nums.forEach(v=&gt; {console.log(v)})</li>
+<li>词法 this</li>
+</ul>
+<p>三、参数处理</p>
+<ul>
+<li>默认参数值</li>
+<li>剩余参数</li>
+<li>展开运算符</li>
+</ul>
+<p>四、模板字面量</p>
+<ul>
+<li>多行字符串</li>
+<li>字符串插值</li>
+<li>带标签的模板字面量</li>
+<li>原始字符串</li>
+</ul>
+<p>五、原有字面量加强</p>
+<ul>
+<li>更安全的二进制字面量(0b1111101)</li>
+<li>更安全的八进制字面量(0o767)</li>
+<li>字符串支持Unicode<ul>
+<li>String.fromCodePoint</li>
+<li>String.prototype.codePointAt</li>
+</ul>
+</li>
+<li>正则表达式字面量添加 Unicode</li>
+<li>正则表达式添加y标记，支持粘滞匹配</li>
+<li>对象属性加强<ul>
+<li>属性定义支持短语法obj = {x,y}</li>
+<li>属性名支持表达式 obj = {[“baz”+quux()]:42}</li>
+<li>添加<strong>proto</strong>属性，但不建议使用</li>
+</ul>
 </li>
 </ul>
-        
-          <a class="article-more-a" href="/2016/04/17/jQuery/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/04/17/jQuery/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/17/post/">上传博客</a>
-    </h1>
-  
-
-        
-        <a href="/2016/02/17/post/" class="archive-article-date">
-  	<time datetime="2016-02-16T17:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-02-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="npm-node-package-mana"><a href="#npm-node-package-mana" class="headerlink" title="npm node package mana"></a>npm node package mana</h2><ul>
-<li>安装完node后自带送一个npm</li>
-<li>安装前端包  bower</li>
-<li>安装后台包  npm</li>
+<p>六、解构赋值</p>
+<ul>
+<li>匹配 [b,a] = [a,b]</li>
+<li>对象匹配 let {a,b,c} = objABC</li>
+<li>参数匹配 function g({name:n,val:v}){}</li>
 </ul>
-        
-          <a class="article-more-a" href="/2016/02/17/post/#more">more >></a>
-        
+<p>七、模块</p>
+<ul>
+<li>导入(import)</li>
+<li>导出(export)</li>
+<li>默认导出(export default)</li>
+</ul>
+<p>八、类</p>
+<ul>
+<li>使用extends继承</li>
+<li>重写构造器</li>
+<li>super关键字</li>
+</ul>
+<p>九、迭代</p>
+<ul>
+<li>迭代器</li>
+<li>for of</li>
+</ul>
+<p>十、生成器</p>
+<p>十一、<a href="http://example.com/" target="_blank" rel="external">promise</a>.</p>
+<p>十二、元编程</p>
+<ul>
+<li>代理(proxy)</li>
+<li>反射(Reflex)</li>
+</ul>
+<p>十三、新增数据类型</p>
+<ul>
+<li>Symbol类型</li>
+<li>Set类型</li>
+<li>Map类型</li>
+<li>WeakSet类型</li>
+<li>WeakMap类型</li>
+<li>TypedArray类型</li>
+</ul>
+<p>十四、原有内置对象API增强</p>
+<ul>
+<li><p>Object.assign</p>
+</li>
+<li><p>Array.from</p>
+</li>
+<li><p>Array.of</p>
+</li>
+<li><p>Array.prototype.fill</p>
+</li>
+<li><p>Array.prototype.find</p>
+</li>
+<li><p>Array.prototype.findIndex</p>
+</li>
+<li><p>Array.prototype.copyWithin</p>
+</li>
+<li><p>Array.prototype.entries</p>
+</li>
+<li><p>Array.prototype.keys</p>
+</li>
+<li><p>Array.prototype.values</p>
+</li>
+<li><p>String.prototype.includes</p>
+</li>
+<li><p>String.prototype.repeat</p>
+</li>
+<li><p>String.prototype.startsWidth</p>
+</li>
+<li><p>String.prototype.endsWidth()</p>
+</li>
+<li><p>Number.EPSILON</p>
+</li>
+<li><p>Number.isInteger</p>
+</li>
+<li><p>Number.isSafeInteger</p>
+</li>
+<li><p>Number.isFinite</p>
+</li>
+<li><p>Number.isNaN(“NaN”)</p>
+</li>
+<li><p>Math.acosh</p>
+</li>
+<li><p>Math.hypot</p>
+</li>
+<li><p>Math.imul</p>
+</li>
+<li><p>Math.sign</p>
+</li>
+<li><p>Math.trunc</p>
+</li>
+</ul>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -312,10 +365,6 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/02/17/post/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -323,7 +372,16 @@
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/28/ES6中promise/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6的promise</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -331,11 +389,10 @@
 
 
   
+    <div class="duoshuo"></div>
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-    </nav>
-  
+
+
 
 
           </div>
@@ -357,8 +414,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
