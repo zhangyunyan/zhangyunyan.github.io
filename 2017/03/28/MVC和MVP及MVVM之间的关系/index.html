@@ -6,14 +6,40 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | zhangyy</title>
+  <title>MVC、MVP、MVVM之间的关系 | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangyy">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="一、MVC什么是MVC
+MVC是一种模式，它将应用分为3个部分：数据（模型）、表现层（视图）、用户交互层（控制器）
+一个事件的处理大概是这样
+用户和应用产生交互
+控制器的事件处理器被触发
+控制器从模型中请求数据，并将其交给视图
+视图将数据呈现给用户">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MVC、MVP、MVVM之间的关系">
+<meta property="og:url" content="http://yoursite.com/2017/03/28/MVC和MVP及MVVM之间的关系/index.html">
 <meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="一、MVC什么是MVC
+MVC是一种模式，它将应用分为3个部分：数据（模型）、表现层（视图）、用户交互层（控制器）
+一个事件的处理大概是这样
+用户和应用产生交互
+控制器的事件处理器被触发
+控制器从模型中请求数据，并将其交给视图
+视图将数据呈现给用户">
+<meta property="og:image" content="http://yoursite.com/../../../../img/bg2015020105.png">
+<meta property="og:image" content="http://yoursite.com/../../../../img/bg2015020106.png">
+<meta property="og:image" content="http://yoursite.com/../../../../img/bg2015020107.png">
+<meta property="og:updated_time" content="2017-03-28T07:17:11.952Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="MVC、MVP、MVVM之间的关系">
+<meta name="twitter:description" content="一、MVC什么是MVC
+MVC是一种模式，它将应用分为3个部分：数据（模型）、表现层（视图）、用户交互层（控制器）
+一个事件的处理大概是这样
+用户和应用产生交互
+控制器的事件处理器被触发
+控制器从模型中请求数据，并将其交给视图
+视图将数据呈现给用户">
+<meta name="twitter:image" content="http://yoursite.com/../../../../img/bg2015020105.png">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -163,161 +189,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-MVC和MVP及MVVM之间的关系" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      MVC、MVP、MVVM之间的关系
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/28/MVC和MVP及MVVM之间的关系/" class="archive-article-date">
+
+        
+        <a href="/2017/03/28/MVC和MVP及MVVM之间的关系/" class="archive-article-date">
   	<time datetime="2017-03-28T07:17:11.952Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/28/MVC和MVP及MVVM之间的关系/">MVC、MVP、MVVM之间的关系</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、MVC"><a href="#一、MVC" class="headerlink" title="一、MVC"></a>一、MVC</h2><h3 id="什么是MVC"><a href="#什么是MVC" class="headerlink" title="什么是MVC"></a>什么是MVC</h3><ul>
+<li>MVC是一种模式，它将应用分为3个部分：数据（模型）、表现层（视图）、用户交互层（控制器）</li>
+<li>一个事件的处理大概是这样<ul>
+<li>用户和应用产生交互</li>
+<li>控制器的事件处理器被触发</li>
+<li>控制器从模型中请求数据，并将其交给视图</li>
+<li>视图将数据呈现给用户</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<h3 id="模型（数据保存）"><a href="#模型（数据保存）" class="headerlink" title="模型（数据保存）"></a>模型（数据保存）</h3><ul>
+<li>模型用来存放用户的所有数据对象。比如有一个user模型，用来存放用户列表、他们的属性以及所有和模型有关的逻辑</li>
+<li>模型不必知晓视图和控制器的细节，模型只需包含数据以及直接和这些数据相关的逻辑</li>
+</ul>
+<h3 id="视图（用户界面）"><a href="#视图（用户界面）" class="headerlink" title="视图（用户界面）"></a>视图（用户界面）</h3><ul>
+<li>视图是呈现给用户的，用户与之产生交互。在JavaScript应用中，视图大都是由HTML、css、JavaScript模板组成的</li>
+</ul>
+<h3 id="控制器（业务逻辑）"><a href="#控制器（业务逻辑）" class="headerlink" title="控制器（业务逻辑）"></a>控制器（业务逻辑）</h3><ul>
+<li>控制器是模型和视图之间的纽带。控制器从视图获得事件和输入，对它们进行进行处理，并相应的更新视图。</li>
+<li>当页面加载时，控制器会给视图添加事件监听，比如监听表单提交或按钮点击。然后当用户和你的应用产生交互时，控制器中的事件触发器就开始工作了</li>
+</ul>
+<h3 id="总结一下："><a href="#总结一下：" class="headerlink" title="总结一下："></a>总结一下：</h3><ul>
+<li>Controller 监听 Model 变化，Model 一变，Controller 就会去更新View。</li>
+<li>Controller 监听用户交互，用户点了提交或修改按钮，Controller 就要去更新 Model</li>
+<li>View 传送指令到 Controller</li>
+<li>Controller 完成业务逻辑后，要求 Model 改变状态</li>
+<li>Model 将新的数据发送到 View，用户得到反馈</li>
+</ul>
+<p>各部分之间的通信方式<br> <img src="../../../../img/bg2015020105.png" alt="Alt text" title="Optional title"></p>
+<h3 id="互动模式"><a href="#互动模式" class="headerlink" title="互动模式"></a>互动模式</h3><ul>
+<li>接受用户指令时，MVC 可以分成两种方式。一种是通过 View 接受指令，传递给 Controller</li>
+</ul>
+<p><img src="../../../../img/bg2015020106.png" alt="Alt text" title="Optional title"></p>
+<ul>
+<li>另一种是直接通过controller接受指令</li>
+</ul>
+<p><img src="../../../../img/bg2015020107.png" alt="Alt text" title="Optional title"></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/28/九宫格/" class="archive-article-date">
-  	<time datetime="2017-03-28T06:37:00.762Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/28/九宫格/">css实现九宫格（兼容问题）</a>
-    </h1>
+  
+    <a href="/2017/03/28/九宫格/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css实现九宫格（兼容问题）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/21/路由/" class="archive-article-date">
-  	<time datetime="2017-03-21T04:54:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/21/路由/">路由</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/19/markdown使用/" class="archive-article-date">
-  	<time datetime="2017-03-19T14:53:48.930Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/markdown使用/">markdown使用</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/19/less/" class="archive-article-date">
-  	<time datetime="2017-03-19T12:56:52.445Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/19/less/">less</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2017/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -340,8 +329,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
