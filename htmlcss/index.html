@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="http://yoursite.com">
+  <title>html+css | zhangyy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="第一部分display:none和visibility:hidden的区别？12display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="html+css">
+<meta property="og:url" content="http://yoursite.com/htmlcss/index.html">
+<meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="第一部分display:none和visibility:hidden的区别？12display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。">
+<meta property="og:updated_time" content="2017-03-23T14:55:46.659Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="html+css">
+<meta name="twitter:description" content="第一部分display:none和visibility:hidden的区别？12display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。">
+  
+    <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" type="text/css" href="/./main.2d7529.css">
+  <style type="text/css">
+  
+    #container.show {
+      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+    }
+  </style>
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container" q-class="show:isCtnShow">
+    <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    <div class="left-col" q-class="show:isShow">
+      
+<div class="overlay" style="background: #4d4d4d"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			<img src="http://i04.pictn.sogoucdn.com/3c28af542f2d49f7-8437bbc8e07dde51-1cb85a2d2d6216c3d0b3d1ec50043e72_qq" class="js-avatar">
+		</a>
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Swallow</a></h1>
+		</hgroup>
+		
+		<p class="header-subtitle">越努力，越幸运</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/htmlcss/">html+css问题总结</a></li>
+	        
+				<li><a href="/nodejs/">js问题总结</a></li>
+	        
+				<li><a href="/tags/">随笔</a></li>
+	        
+				<li><a href="/photos/">相册</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+    		
+    			
+    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+    			
+            
+    			
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/zhangyunyan" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/u/5682310125/home?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
+		        
+					<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+      
+<nav id="mobile-nav">
+  	<div class="overlay js-overlay" style="background: #4d4d4d"></div>
+	<div class="btnctn js-mobile-btnctn">
+  		<div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://i04.pictn.sogoucdn.com/3c28af542f2d49f7-8437bbc8e07dde51-1cb85a2d2d6216c3d0b3d1ec50043e72_qq" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author js-header-author">Swallow</h1>
+			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>越努力，越幸运<i class="icon icon-quo-right"></i></p>
+			
+			
+			
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+			
+			
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/zhangyunyan" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/5682310125/home?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/" title="zhihu"><i class="icon-zhihu"></i></a>
+			        
+				</div>
+			</nav>
+
+			<nav class="header-menu js-header-menu">
+				<ul style="width: 70%">
+				
+				
+					<li style="width: 20%"><a href="/">主页</a></li>
+		        
+					<li style="width: 20%"><a href="/htmlcss/">html+css问题总结</a></li>
+		        
+					<li style="width: 20%"><a href="/nodejs/">js问题总结</a></li>
+		        
+					<li style="width: 20%"><a href="/tags/">随笔</a></li>
+		        
+					<li style="width: 20%"><a href="/photos/">相册</a></li>
+		        
+				</ul>
+			</nav>
+		</header>				
+	</div>
+	<div class="mobile-mask" style="display:none" q-show="isShow"></div>
+</nav>
+
+      <div id="wrapper" class="body-wrap">
+        <div class="menu-l">
+          <div class="canvas-wrap">
+            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+          </div>
+          <div id="js-content" class="content-ll">
+            <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      html+css
+    </h1>
+  
+
+        
+        <a href="/htmlcss/index.html" class="archive-article-date">
+  	<time datetime="2017-03-22T04:53:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="第一部分"><a href="#第一部分" class="headerlink" title="第一部分"></a>第一部分</h1><h2 id="display-none和visibility-hidden的区别？"><a href="#display-none和visibility-hidden的区别？" class="headerlink" title="display:none和visibility:hidden的区别？"></a>display:none和visibility:hidden的区别？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">display:none 隐藏对应的元素，在文档布局中不再给它分配空间，它各边的元素会合拢，就当他从来不存在。</div><div class="line">visibility:hidden 隐藏对应的元素，但是在文档布局中仍保留原来的空间。</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="CSS中-link-和-import-的区别是？"><a href="#CSS中-link-和-import-的区别是？" class="headerlink" title="CSS中 link 和@import 的区别是？"></a>CSS中 link 和@import 的区别是？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">(1) link属于HTML标签，而@import是CSS提供的;</div><div class="line">(2) 页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</div><div class="line">(3) import只在IE5以上才能识别，而link是HTML标签，无兼容问题;</div><div class="line">(4) link方式的样式的权重高于@import的权重.</div></pre></td></tr></table></figure>
+<h2 id="position的absolute与fixed共同点与不同点"><a href="#position的absolute与fixed共同点与不同点" class="headerlink" title="position的absolute与fixed共同点与不同点"></a>position的absolute与fixed共同点与不同点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">共同点：</div><div class="line"> 1.改变行内元素的呈现方式，display被置为block；</div><div class="line"> 2.让元素脱离普通流，不占据空间；</div><div class="line"> 3.默认会覆盖到非定位元素上</div><div class="line">不同点：</div><div class="line"> absolute的”根元素“是可以设置的，而fixed的”根元素“固定为浏览器窗口。当你滚动网页，fixed元素与浏览器窗口之间的距离是不变的。</div></pre></td></tr></table></figure>
+<h2 id="介绍一下CSS的盒子模型？"><a href="#介绍一下CSS的盒子模型？" class="headerlink" title="介绍一下CSS的盒子模型？"></a>介绍一下CSS的盒子模型？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">IE 盒子模型:</div><div class="line">   IE的content部分包含了 border 和 padding;</div><div class="line">标准 W3C 盒子模型:</div><div class="line">   内容(content)、填充(padding)、边界(margin)、边框(border).</div></pre></td></tr></table></figure>
+<h2 id="CSS-选择符有哪些？哪些属性可以继承？优先级算法如何计算？-CSS3新增伪类有那些？"><a href="#CSS-选择符有哪些？哪些属性可以继承？优先级算法如何计算？-CSS3新增伪类有那些？" class="headerlink" title="CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？"></a>CSS 选择符有哪些？哪些属性可以继承？优先级算法如何计算？ CSS3新增伪类有那些？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">选择器</div><div class="line">1.id选择器（ # myid）</div><div class="line">2.类选择器（.myclassname）</div><div class="line">3.标签选择器（div, h1, p）</div><div class="line">4.相邻选择器（h1 + p）</div><div class="line">5.子选择器（ul &gt; li）</div><div class="line">6.后代选择器（li a）</div><div class="line">7.通配符选择器（ * ）</div><div class="line">8.属性选择器（a[rel = “external”]）</div><div class="line">9.伪类选择器（a: hover, li:nthchild）</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">可继承的样式：</div><div class="line">fontsize fontfamily color, textindent;</div><div class="line">不可继承的样式：</div><div class="line">border padding margin width height ;</div><div class="line">优先级就近原则，同权重情况下样式定义最近者为准;</div><div class="line">载入样式以最后载入的定位为准;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CSS3新增伪类举例：</div><div class="line">p:firstoftype 选择属于其父元素的首个元素的每个元素。</div><div class="line">p:lastoftype 选择属于其父元素的最后元素的每个元素。</div><div class="line">p:onlyoftype 选择属于其父元素唯一的元素的每个元素。</div><div class="line">p:onlychild 选择属于其父元素的唯一子元素的每个元素。</div><div class="line">p:nthchild(2) 选择属于其父元素的第二个子元素的每个元素。</div><div class="line">:enabled :disabled 控制表单控件的禁用状态。</div><div class="line">:checked 单选框或复选框被选中。</div></pre></td></tr></table></figure>
+<h2 id="CSS3有哪些新特性？"><a href="#CSS3有哪些新特性？" class="headerlink" title="CSS3有哪些新特性？"></a>CSS3有哪些新特性？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"> CSS3</div><div class="line"> 实现圆角（borderradius），</div><div class="line"> 阴影（boxshadow），</div><div class="line"> 对文字加特效（textshadow），</div><div class="line"> 线性渐变（gradient），</div><div class="line"> 旋转（transform）</div><div class="line">    transform:rotate(9deg) scale(0.85,0.90) translate(0px,30px)</div><div class="line">skew(9deg,0deg);//旋转,缩放,定位,倾斜增加了更多的CSS选择器多背景 rgba</div><div class="line"> 在CSS3中唯一引入的伪元素是:  :selection.</div><div class="line"> 媒体查询，</div><div class="line"> 多栏布局,</div><div class="line"> border-image</div></pre></td></tr></table></figure>
+<h2 id="为什么要初始化CSS样式"><a href="#为什么要初始化CSS样式" class="headerlink" title="为什么要初始化CSS样式"></a>为什么要初始化CSS样式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。</div><div class="line">当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</div><div class="line"> 最简单的初始化方法就是： * &#123;padding: 0; margin: 0;&#125; （不建议）</div><div class="line"> 淘宝的样式初始化：</div><div class="line"> body, h1, h2, h3, h4, h5, h6, hr, p, bloc kquote, dl, dt, dd, ul, ol, li, pre, form, fi eldset, legend, button, input, textarea, th, td &#123; margin:0; padding:0; &#125;</div><div class="line"> body, button, input, select, textarea &#123; f ont:12px/1.5tahoma, arial, \5b8b\4f53; &#125;</div><div class="line"> h1, h2, h3, h4, h5, h6&#123; fontsize:100%; &#125;</div><div class="line"> address, cite, dfn, em, var &#123; fontstyle:n ormal; &#125;</div><div class="line"> code, kbd, pre, samp &#123; fontfamily:courier new, courier, monospace; &#125;</div><div class="line"> small&#123; fontsize:12px; &#125;</div><div class="line"> ul, ol &#123; liststyle:none; &#125;</div><div class="line"> a &#123; textdecoration:none; &#125;</div><div class="line"> a:hover &#123; textdecoration:underline; &#125;</div><div class="line"> sup &#123; verticalalign:texttop; &#125;</div><div class="line"> sub&#123; verticalalign:textbottom; &#125;</div><div class="line"> legend &#123; color:#000; &#125;</div><div class="line"> fieldset, img &#123; border:0; &#125;</div><div class="line"> button, input, select, textarea &#123; fontsiz e:100%; &#125;</div><div class="line"> table &#123; bordercollapse:collapse; bordersp acing:0; &#125;</div></pre></td></tr></table></figure>
+<h2 id="对BFC规范的理解？"><a href="#对BFC规范的理解？" class="headerlink" title="对BFC规范的理解？"></a>对BFC规范的理解？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">A:</div><div class="line">bfc,块级格式化上下文,一个创建了新的bfc的盒子是独立布局的，盒子里面的子元素的样式不会影响到外面的元素。在同一个bfc中的两个毗邻的块级盒在垂直方向（和布局方向有关系）的margin会发生折叠。（w3c css2.1规范中的一个概念，它决定了元素如何对其内容进行布局，以及与其他元素的关系和相互作用）</div><div class="line">B:</div><div class="line">浮动和绝对定位元素，非块盒的块容器（诸如：inline­blocks,table­cells 和 table­captions），以及 overflow 值不为visiable（除非该值已经延伸到视口上） 的块盒，都会为他们的内容创建新的块格式化上下文。</div><div class="line">在一个块格式化上下文里，盒子从包含块顶部开始一个接一个的纵向排列。两个相邻兄弟盒子之间的垂直的间隙取决于margin 定义。块级盒纵向相邻（水平书写格式下）的 margins会在同一个块格式化上下文中折叠合并（取最大值）。</div><div class="line">在一个块格式化上下文里，每个盒子的左外边界会触碰到包含块的左边界（如果是从右到左的书写格式，则为右边界），即使同时存在浮动元素也是如此（虽然盒子的行框集可能会由于浮动的存在而缩小），除非这个盒子创建了一个新的块格式化上下文（在这种情况下，盒子本身由于浮动可能会变得更</div><div class="line">窄）。</div></pre></td></tr></table></figure>
+<h2 id="说说你对语义化的理解？"><a href="#说说你对语义化的理解？" class="headerlink" title="说说你对语义化的理解？"></a>说说你对语义化的理解？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1，去掉或者丢失样式的时候能够让页面呈现出清晰的结构</div><div class="line">2，有利于SEO：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重；</div><div class="line">3，方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页；</div><div class="line">4，便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循W3C标准的团队都遵循这个标准，可以减少差异化。</div></pre></td></tr></table></figure>
+<h2 id="HTML与XHTML——二者有什么区别"><a href="#HTML与XHTML——二者有什么区别" class="headerlink" title="HTML与XHTML——二者有什么区别?"></a>HTML与XHTML——二者有什么区别?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">最主要的不同：(w3school中规范)</div><div class="line">1.XHTML 元素必须被正确地嵌套。</div><div class="line">2.XHTML 元素必须被关闭。（空标签也必须使用结束标签，或者其开始标签必须使用/&gt;结尾。&lt;br/&gt;）</div><div class="line">3.标签名必须用小写字母。</div><div class="line">4.XHTML 文档必须拥有根元素。(所有的 XHTML 元素必须被嵌套于 &lt;html&gt; 根元素中。其余所有的元素均可有子元素。子元素必须是成对的且被嵌套在其父元素之中。)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1.所有的标记都必须要有一个相应的结束标记 </div><div class="line">2.所有标签的元素和属性的名字都必须使用小写 </div><div class="line">3.所有的XML标记都必须合理嵌套 </div><div class="line">4.所有的属性必须用引号”“括起来 </div><div class="line">5.把所有&lt;和&amp;特殊符号用编码表示 </div><div class="line">6.给所有属性赋一个值 </div><div class="line">7.不要在注释内容中使“” </div><div class="line">8.图片必须有说明文字</div></pre></td></tr></table></figure>
+<h2 id="常见兼容性问题"><a href="#常见兼容性问题" class="headerlink" title="常见兼容性问题"></a>常见兼容性问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line">1.png24位的图片在iE6浏览器上出现背景，解决方案是做成PNG8,也可以引用一段脚本处理.</div><div class="line">2.浏览器默认的margin和padding不同。解决方案是加一个全局的*&#123;margin:0;padding:0;&#125;来统一。</div><div class="line">3.IE6双边距bug:块属性标签float后，又有横行的margin情况</div><div class="line">下，在ie6显示margin比设置的大。</div><div class="line">4.浮动ie产生的双倍距离（IE6双边距问题：在IE6下，如果对元</div><div class="line">素设置了浮动，同时又设置了marginleft或marginright，</div><div class="line">margin值会加倍。）</div><div class="line">    &lt;!-- #box&#123; float:left; width:10px; margin:0 0 0 100px;&#125; --&gt;</div><div class="line">这种情况之下IE会产生20px的距离，解决方案是在float的标签样式</div><div class="line">控制中加入 display:inline;将其转化为行内属性。(这个符号只有ie6</div><div class="line">会识别)</div><div class="line">5.渐进识别的方式，从总体中逐渐排除局部。</div><div class="line">首先，巧妙的使用“\9”这一标记，将IE游览器从所有情况中分</div><div class="line">离出来。 </div><div class="line">接着，再次使用“+”将IE8和IE7、IE6分离开来，这样IE8已经独</div><div class="line">立识别。</div><div class="line">css</div><div class="line">    &lt;!-- .bb&#123;</div><div class="line">        backgroundcolor:#f1ee18;/*所有识别*/</div><div class="line">        .backgroundcolor:#00deff\9; /*IE6、7、8识别*/</div><div class="line">        +backgroundcolor:#a200ff;/*IE6、7识别*/</div><div class="line">        _backgroundcolor:#1e0bd1;/*IE6识别*/</div><div class="line">    &#125; --&gt;</div><div class="line">6.IE下,可以使用获取常规属性的方法来获取自定义属性, </div><div class="line">也可以使用getAttribute()获取自定义属性; </div><div class="line">Firefox下,只能使用getAttribute()获取自定义属性. </div><div class="line">解决方法:统一通过getAttribute()获取自定义属性.</div><div class="line">7.IE下,event对象有x,y属性,但是没有pageX,pageY属性; </div><div class="line">Firefox下,event对象有pageX,pageY属性,但是没有x,y属性.</div><div class="line">8.解决方法：（条件注释）缺点是在IE浏览器下可能会增加额外</div><div class="line">的HTTP请求数。</div><div class="line">9.Chrome 中文界面下默认会将小于 12px 的文本强制按照 12px</div><div class="line">显示, </div><div class="line">可通过加入 CSS 属性 webkittextsizeadjust: none; 解决.</div><div class="line">10.超链接访问过后hover样式就不出现了 被点击访问过的超链接</div><div class="line">样式不在具有hover和active了解决方法是改变CSS属性的排列</div><div class="line">顺序: </div><div class="line">LVHA : a:link &#123;&#125; a:visited &#123;&#125; a:hover &#123;&#125; a:active &#123;&#125;</div><div class="line">11.怪异模式问题：漏写DTD声明，Firefox仍然会按照标准模式来</div><div class="line">解析网页，但在IE中会触发怪异模式。为避免怪异模式给我们</div><div class="line">带来不必要的麻烦，最好养成书写DTD声明的好习惯。现在可</div><div class="line">以使用html5推荐的写法： &lt;doctype html&gt;</div><div class="line">12.上下margin重合问题 </div><div class="line">ie和ff都存在，相邻的两个div的marginleft和marginright不会重</div><div class="line">合，但是margintop和marginbottom却会发生重合。 </div><div class="line">解决方法，养成良好的代码编写习惯，同时采用margintop或</div><div class="line">者同时采用marginbottom。</div><div class="line">13.ie6对png图片格式支持不好(引用一段脚本处理)</div></pre></td></tr></table></figure>
+<h2 id="浮动元素引起的问题和解决办法？"><a href="#浮动元素引起的问题和解决办法？" class="headerlink" title="浮动元素引起的问题和解决办法？"></a>浮动元素引起的问题和解决办法？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">浮动元素引起的问题： </div><div class="line">（1）父元素的高度无法被撑开，影响与父元素同级的元素 </div><div class="line">（2）与浮动元素同级的非浮动元素会跟随其后 </div><div class="line">（3）若非第一个元素浮动，则该元素之前的元素也需要浮动，否则会影响页面显示的结构</div><div class="line">解决方法： 使用CSS中的clear:both;属性来清除元素的浮动可解决2、3问题，对于问题1，</div><div class="line">1.添加如下样式，给父元素添加clearfix样式：</div><div class="line">&lt;优点：兼容性很好 弊端：代码过多，增加文件大小&gt;</div><div class="line">    &lt;!--</div><div class="line">        .clearfix:after&#123;</div><div class="line">        content: &quot;.&quot;;</div><div class="line">        display: block;</div><div class="line">        height: 0;</div><div class="line">        clear: both;</div><div class="line">        visibility: hidden;</div><div class="line">        &#125;</div><div class="line">        .clearfix&#123;</div><div class="line">        display: inline-block;</div><div class="line">        &#125; /* for IE/Mac */</div><div class="line">    --&gt;</div><div class="line">2.额外标签法，</div><div class="line">（缺点：不过这个办法会增加额外的标签使HTML结构看起来</div><div class="line">不够简洁。）</div><div class="line">3.浮动外部元素</div><div class="line">4.给父级元素设置 overflow:hidden 或者 overflow:auto</div></pre></td></tr></table></figure>
+<h2 id="简介盒子模型，并且可以画出盒子模型"><a href="#简介盒子模型，并且可以画出盒子模型" class="headerlink" title="简介盒子模型，并且可以画出盒子模型"></a>简介盒子模型，并且可以画出盒子模型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">CSS的盒子模型有两种：IE盒子模型、标准的W3C盒子模型模型 </div><div class="line">盒模型：内容、内边距、外边距（一般不计入盒子实际宽度）、边框</div><div class="line">标准的W3C盒子模型模型：content 部分不包含其他部分</div><div class="line">ie 盒子模型： content 部分包含了 border 和 padding</div></pre></td></tr></table></figure>
+<h2 id="px和em的区别"><a href="#px和em的区别" class="headerlink" title="px和em的区别"></a>px和em的区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，并且em会继承父级元素的字体大小。 </div><div class="line">浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em。</div></pre></td></tr></table></figure>
+<h2 id="描述一个”reset”的CSS文件并如何使用它。知道normalize-css吗？你了解他们的不同之处？"><a href="#描述一个”reset”的CSS文件并如何使用它。知道normalize-css吗？你了解他们的不同之处？" class="headerlink" title="描述一个”reset”的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处？"></a>描述一个”reset”的CSS文件并如何使用它。知道normalize.css吗？你了解他们的不同之处？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">重置样式非常多，凡是一个前端开发人员肯定有一个常用的重置CSS文件并知道如何使用它们。他们是盲目的在做还是知道为什么这么做呢？原因是不同的浏览器对一些元素有不同的默认样式，如果你不处理，在不同的浏览器下会存在必要的风险，或者更有戏剧性的性发生。 </div><div class="line">你可能会用Normalize来代替你的重置样式文件。它没有重置所有的样式风格，但仅提供了一套合理的默认样式值。既能让众多浏览器达到一致和合理，但又不扰乱其他的东西（如粗体的标题）。 </div><div class="line">在这一方面，无法做每一个复位重置。它也确实有些超过一个重置，它处理了你永远都不用考虑的怪癖，像HTML的audio元素不一致或line­height不一致。</div></pre></td></tr></table></figure>
+<h2 id="Sass、LESS是什么？大家为什么要使用他们？"><a href="#Sass、LESS是什么？大家为什么要使用他们？" class="headerlink" title="Sass、LESS是什么？大家为什么要使用他们？"></a>Sass、LESS是什么？大家为什么要使用他们？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">他们是CSS预处理器。他是CSS上的一种抽象层。他们是一种特殊的语法/语言编译成CSS。 </div><div class="line">例如Less是一种动态样式语言. 将CSS赋予了动态语言的特性，如变量，继承，运算， 函数. LESS 既可以在客户端上运行 (支持IE 6+, Webkit, Firefox)，也可一在服务端运行 (借助</div><div class="line">Node.js)。 </div><div class="line">为什么要使用它们？ </div><div class="line">1.结构清晰，便于扩展。 </div><div class="line">2.可以方便地屏蔽浏览器私有语法差异。这个不用多说，封装对浏览器语法差异的重复处理，减少无意义的机械劳动。 </div><div class="line">3.可以轻松实现多重继承。 </div><div class="line">4.完全兼容 CSS 代码，可以方便地应用到老项目中。LESS 只是在 CSS 语法上做了扩展，所以老的 CSS 代码也可以与LESS 代码一同编译。</div></pre></td></tr></table></figure>
+<h2 id="对WEB标准以及W3C的理解与认识"><a href="#对WEB标准以及W3C的理解与认识" class="headerlink" title="对WEB标准以及W3C的理解与认识"></a>对WEB标准以及W3C的理解与认识</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维 护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性。</div></pre></td></tr></table></figure>
+<h2 id="Doctype作用-严格模式与混杂模式­如何触发这两种模式，区分它们有何意义"><a href="#Doctype作用-严格模式与混杂模式­如何触发这两种模式，区分它们有何意义" class="headerlink" title="Doctype作用? 严格模式与混杂模式­如何触发这两种模式，区分它们有何意义?"></a>Doctype作用? 严格模式与混杂模式­如何触发这两种模式，区分它们有何意义?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">（1）、 声明位于文档中的最前面，处于 标签之前。告知浏览器的解析器，用什么文档类型 规范来解析这个文档。 </div><div class="line">（2）、严格模式的排版和 JS 运作模式是 以该浏览器支持的</div><div class="line">最高标准运行。 </div><div class="line">（3）、在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。 </div><div class="line">（4）、DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</div></pre></td></tr></table></figure>
+<h2 id="如何居中div-如何居中一个浮动元素"><a href="#如何居中div-如何居中一个浮动元素" class="headerlink" title="如何居中div,如何居中一个浮动元素?"></a>如何居中div,如何居中一个浮动元素?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">给div设置一个宽度，然后添加margin:0 auto属性</div><div class="line">    &lt;!--</div><div class="line">        div&#123;</div><div class="line">            width:200px;</div><div class="line">            margin:0 auto;</div><div class="line">        &#125;</div><div class="line">    --&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">居中一个浮动元素 确定容器的宽高 宽500 高 300 的层 设置层的外边距</div><div class="line">    &lt;!--</div><div class="line">        .div &#123;</div><div class="line">            Width:500px ;</div><div class="line">            height:300px;//高度可以不设</div><div class="line">            Margin: -150px 0 0 -250px;</div><div class="line">            position:relative;相对定位</div><div class="line">            background-color:pink;//方便看效果</div><div class="line">            left:50%;</div><div class="line">            top:50%;</div><div class="line">        &#125;</div><div class="line">    --&gt;</div></pre></td></tr></table></figure>
+<h2 id="css优先级算法如何计算？"><a href="#css优先级算法如何计算？" class="headerlink" title="css优先级算法如何计算？"></a>css优先级算法如何计算？</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">!important &gt; id &gt; class &gt; 标签</div><div class="line">!important 比 内联优先级高</div><div class="line">优先级就近原则，样式定义最近者为准;</div><div class="line">以最后载入的样式为准;</div></pre></td></tr></table></figure>
+<h2 id="Doctype作用-严格模式与混杂模式­如何触发这两种模式，区分它们有何意义-1"><a href="#Doctype作用-严格模式与混杂模式­如何触发这两种模式，区分它们有何意义-1" class="headerlink" title="Doctype作用? 严格模式与混杂模式­如何触发这两种模式，区分它们有何意义?"></a>Doctype作用? 严格模式与混杂模式­如何触发这两种模式，区分它们有何意义?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">1. 声明位于文档中的最前面，处于 标签之前。告知浏览器的解析器，用什么文档类型 规范来解析这个文档。</div><div class="line">2.严格模式的排版和 JS 运作模式是 以该浏览器支持的最高标准运行。</div><div class="line">3.在混杂模式中，页面以宽松的向后兼容的方式显示。模拟老式浏览器的行为以防止站点无法工作。</div><div class="line">4.DOCTYPE不存在或格式不正确会导致文档以混杂模式呈现。</div></pre></td></tr></table></figure>
+<h2 id="浏览器标准模式和怪异模式之间的区别是什么"><a href="#浏览器标准模式和怪异模式之间的区别是什么" class="headerlink" title="浏览器标准模式和怪异模式之间的区别是什么?"></a>浏览器标准模式和怪异模式之间的区别是什么?</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">盒子模型 渲染模式的不同 </div><div class="line">使用 window.top.document.compatMode 可显示为什么模式</div></pre></td></tr></table></figure>
+<h2 id="你能描述一下渐进增强和优雅降级之间的不同吗"><a href="#你能描述一下渐进增强和优雅降级之间的不同吗" class="headerlink" title="你能描述一下渐进增强和优雅降级之间的不同吗"></a>你能描述一下渐进增强和优雅降级之间的不同吗</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">渐进增强 progressive enhancement：针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。 </div><div class="line">优雅降级 graceful degradation：一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。 </div><div class="line">　　区别：优雅降级是从复杂的现状开始，并试图减少用户体验的供给，而渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要。降级（功能衰减）意味着往回看；而渐进增强则意味着朝前看，同时保证其根基处于安全地带。　 </div><div class="line">　　“优雅降级”观点 </div><div class="line">　　“优雅降级”观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。 </div><div class="line">　　在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。 </div><div class="line">　　“渐进增强”观点 </div><div class="line">　　“渐进增强”观点则认为应关注于内容本身。 </div><div class="line">　　内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得“渐进增强”成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。</div></pre></td></tr></table></figure>
+<h2 id="哪些css属性可以继承"><a href="#哪些css属性可以继承" class="headerlink" title="哪些css属性可以继承"></a>哪些css属性可以继承</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">letter­spacing、word­spacing、white­space、【line­height】、【color】、font、【font­family、font­size、font­style】、font­variant、【font­weight】、【text­decoration（文字的装饰）】、text­transform、direction、text­indent（首行缩进）和text­align（水平居中对齐）、list­style（列表样式）、（list­style­type、list­style­position、list­style­image）</div></pre></td></tr></table></figure>
+<h2 id="visibility-属性值有什么，是干嘛用的"><a href="#visibility-属性值有什么，是干嘛用的" class="headerlink" title="visibility 属性值有什么，是干嘛用的"></a>visibility 属性值有什么，是干嘛用的</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">visible 默认值。元素是可见的。</div><div class="line">hidden 元素是不可见的。</div><div class="line">collapse 当在表格元素中使用时，此值可删除一行或一列，但是它不会影响表格的布局。被行或列占据的空间会留给其他内容使用。如果此值被用在其他的元素上，会呈现为 “hidden”。</div><div class="line">inherit 规定应该从父元素继承 visibility 属性的值。</div></pre></td></tr></table></figure>
+<h2 id="两列布局-amp-三列布局"><a href="#两列布局-amp-三列布局" class="headerlink" title="两列布局&amp;三列布局"></a>两列布局&amp;三列布局</h2><p>两列布局<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">    &lt;style&gt;</div><div class="line">        *&#123;</div><div class="line">        margin: 0;</div><div class="line">        padding: 0;</div><div class="line">        &#125;</div><div class="line">        .box1&#123;</div><div class="line">        width: 200px;</div><div class="line">        height: 300px;</div><div class="line">        background: aqua;</div><div class="line">        float: left;</div><div class="line">        &#125;</div><div class="line">        .box2&#123;</div><div class="line">        height: 400px;</div><div class="line">        background: yellow;</div><div class="line">        margin-left: 200px;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<p>三列布局<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">    &lt;style&gt;</div><div class="line">        .box1&#123;</div><div class="line">        width: 200px;</div><div class="line">        height: 200px;</div><div class="line">        background: red;</div><div class="line">        float: left;</div><div class="line">        &#125;</div><div class="line">        .box2&#123;</div><div class="line">        height: 300px;</div><div class="line">        background: orange;</div><div class="line">        margin: 0 200px;</div><div class="line">        &#125;</div><div class="line">        .box3&#123;</div><div class="line">        width: 200px;</div><div class="line">        height: 400px;</div><div class="line">        background: lawngreen;</div><div class="line">        float: right;</div><div class="line">        &#125;</div><div class="line">    &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">    &lt;!--左右固定（宽度都为200px） 中间自适应--&gt;</div><div class="line">    &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box3&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;</div><div class="line">&lt;/body&gt;</div></pre></td></tr></table></figure></p>
+<h2 id="块级元素、行内元素、行内块级元素有哪些"><a href="#块级元素、行内元素、行内块级元素有哪些" class="headerlink" title="块级元素、行内元素、行内块级元素有哪些"></a>块级元素、行内元素、行内块级元素有哪些</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">1.块级元素: div、p、h1~h6、hr、ul、li、ol、dl、dt、dd、form、table、tr、td、thead、tbody、tfoot</div><div class="line">2.行内元素: a、span、i、em、b、strong、u、del、s、sup、sub、label</div><div class="line">3.行内块级元素: input、img、select</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">display的相关属性</div><div class="line">none: 不显示，不占位置</div><div class="line">block: 显示，转为块级元素</div><div class="line">inline: 转为行内元素</div><div class="line">inline­block: 转为行内块级元素</div><div class="line">table: 此元素会作为块级表格来显示（类似 ），表格前后带有换行符</div><div class="line">inline­table: 此元素会作为内联表格来显示（类似 ），表格前后没有换行符。</div><div class="line">table­column: 此元素会作为一个单元格列显示（类似 ）</div><div class="line">table­cell: 此元素会作为一个表格单元格显示（类似 和 ）</div><div class="line">inherit: 规定应该从父元素继承 display 属性的值。</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
+  
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Swallow
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		isHome: false,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true,
+		showTags: false
+	}
+</script>
+
+<script>!function(t){function n(r){if(e[r])return e[r].exports;var o=e[r]={exports:{},id:r,loaded:!1};return t[r].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var e={};return n.m=t,n.c=e,n.p="./",n(0)}([function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}function o(t,n){var e=/\/|index.html/g;return t.replace(e,"")===n.replace(e,"")}function i(){for(var t=document.querySelectorAll(".js-header-menu li a"),n=window.location.pathname,e=0,r=t.length;e<r;e++){var i=t[e];o(n,i.getAttribute("href"))&&(0,d.default)(i,"active")}}function u(t){for(var n=t.offsetLeft,e=t.offsetParent;null!==e;)n+=e.offsetLeft,e=e.offsetParent;return n}function f(t){for(var n=t.offsetTop,e=t.offsetParent;null!==e;)n+=e.offsetTop,e=e.offsetParent;return n}function c(t,n,e,r,o){var i=u(t),c=f(t)-n;if(c-e<=o){var a=t.$newDom;a||(a=t.cloneNode(!0),(0,h.default)(t,a),t.$newDom=a,a.style.position="fixed",a.style.top=(e||c)+"px",a.style.left=i+"px",a.style.zIndex=r||2,a.style.width="100%",a.style.color="#fff"),a.style.visibility="visible",t.style.visibility="hidden"}else{t.style.visibility="visible";var s=t.$newDom;s&&(s.style.visibility="hidden")}}function a(){var t=document.querySelector(".js-overlay"),n=document.querySelector(".js-header-menu");c(t,document.body.scrollTop,-63,2,0),c(n,document.body.scrollTop,1,3,0)}function s(){document.querySelector("#container").addEventListener("scroll",function(t){a()}),window.addEventListener("scroll",function(t){a()}),a()}function l(){x.default.versions.mobile&&window.screen.width<800&&(i(),s())}var p=e(71),d=r(p),v=e(72),y=(r(v),e(84)),h=r(y),b=e(69),x=r(b),m=e(75),g=r(m),w=e(70);l(),(0,w.addLoadEvent)(function(){g.default.init()}),t.exports={}},function(t,n){var e=t.exports="undefined"!=typeof window&&window.Math==Math?window:"undefined"!=typeof self&&self.Math==Math?self:Function("return this")();"number"==typeof __g&&(__g=e)},function(t,n){var e={}.hasOwnProperty;t.exports=function(t,n){return e.call(t,n)}},function(t,n,e){var r=e(49),o=e(15);t.exports=function(t){return r(o(t))}},function(t,n,e){t.exports=!e(8)(function(){return 7!=Object.defineProperty({},"a",{get:function(){return 7}}).a})},function(t,n,e){var r=e(6),o=e(12);t.exports=e(4)?function(t,n,e){return r.f(t,n,o(1,e))}:function(t,n,e){return t[n]=e,t}},function(t,n,e){var r=e(10),o=e(30),i=e(24),u=Object.defineProperty;n.f=e(4)?Object.defineProperty:function(t,n,e){if(r(t),n=i(n,!0),r(e),o)try{return u(t,n,e)}catch(t){}if("get"in e||"set"in e)throw TypeError("Accessors not supported!");return"value"in e&&(t[n]=e.value),t}},function(t,n,e){var r=e(22)("wks"),o=e(13),i=e(1).Symbol,u="function"==typeof i,f=t.exports=function(t){return r[t]||(r[t]=u&&i[t]||(u?i:o)("Symbol."+t))};f.store=r},function(t,n){t.exports=function(t){try{return!!t()}catch(t){return!0}}},function(t,n,e){var r=e(35),o=e(16);t.exports=Object.keys||function(t){return r(t,o)}},function(t,n,e){var r=e(11);t.exports=function(t){if(!r(t))throw TypeError(t+" is not an object!");return t}},function(t,n){t.exports=function(t){return"object"==typeof t?null!==t:"function"==typeof t}},function(t,n){t.exports=function(t,n){return{enumerable:!(1&t),configurable:!(2&t),writable:!(4&t),value:n}}},function(t,n){var e=0,r=Math.random();t.exports=function(t){return"Symbol(".concat(void 0===t?"":t,")_",(++e+r).toString(36))}},function(t,n){var e=t.exports={version:"2.4.0"};"number"==typeof __e&&(__e=e)},function(t,n){t.exports=function(t){if(void 0==t)throw TypeError("Can't call method on  "+t);return t}},function(t,n){t.exports="constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf".split(",")},function(t,n){t.exports={}},function(t,n){t.exports=!0},function(t,n){n.f={}.propertyIsEnumerable},function(t,n,e){var r=e(6).f,o=e(2),i=e(7)("toStringTag");t.exports=function(t,n,e){t&&!o(t=e?t:t.prototype,i)&&r(t,i,{configurable:!0,value:n})}},function(t,n,e){var r=e(22)("keys"),o=e(13);t.exports=function(t){return r[t]||(r[t]=o(t))}},function(t,n,e){var r=e(1),o="__core-js_shared__",i=r[o]||(r[o]={});t.exports=function(t){return i[t]||(i[t]={})}},function(t,n){var e=Math.ceil,r=Math.floor;t.exports=function(t){return isNaN(t=+t)?0:(t>0?r:e)(t)}},function(t,n,e){var r=e(11);t.exports=function(t,n){if(!r(t))return t;var e,o;if(n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;if("function"==typeof(e=t.valueOf)&&!r(o=e.call(t)))return o;if(!n&&"function"==typeof(e=t.toString)&&!r(o=e.call(t)))return o;throw TypeError("Can't convert object to primitive value")}},function(t,n,e){var r=e(1),o=e(14),i=e(18),u=e(26),f=e(6).f;t.exports=function(t){var n=o.Symbol||(o.Symbol=i?{}:r.Symbol||{});"_"==t.charAt(0)||t in n||f(n,t,{value:u.f(t)})}},function(t,n,e){n.f=e(7)},function(t,n,e){var r=e(1),o=e(14),i=e(46),u=e(5),f="prototype",c=function(t,n,e){var a,s,l,p=t&c.F,d=t&c.G,v=t&c.S,y=t&c.P,h=t&c.B,b=t&c.W,x=d?o:o[n]||(o[n]={}),m=x[f],g=d?r:v?r[n]:(r[n]||{})[f];d&&(e=n);for(a in e)s=!p&&g&&void 0!==g[a],s&&a in x||(l=s?g[a]:e[a],x[a]=d&&"function"!=typeof g[a]?e[a]:h&&s?i(l,r):b&&g[a]==l?function(t){var n=function(n,e,r){if(this instanceof t){switch(arguments.length){case 0:return new t;case 1:return new t(n);case 2:return new t(n,e)}return new t(n,e,r)}return t.apply(this,arguments)};return n[f]=t[f],n}(l):y&&"function"==typeof l?i(Function.call,l):l,y&&((x.virtual||(x.virtual={}))[a]=l,t&c.R&&m&&!m[a]&&u(m,a,l)))};c.F=1,c.G=2,c.S=4,c.P=8,c.B=16,c.W=32,c.U=64,c.R=128,t.exports=c},function(t,n){var e={}.toString;t.exports=function(t){return e.call(t).slice(8,-1)}},function(t,n,e){var r=e(11),o=e(1).document,i=r(o)&&r(o.createElement);t.exports=function(t){return i?o.createElement(t):{}}},function(t,n,e){t.exports=!e(4)&&!e(8)(function(){return 7!=Object.defineProperty(e(29)("div"),"a",{get:function(){return 7}}).a})},function(t,n,e){"use strict";var r=e(18),o=e(27),i=e(36),u=e(5),f=e(2),c=e(17),a=e(51),s=e(20),l=e(58),p=e(7)("iterator"),d=!([].keys&&"next"in[].keys()),v="@@iterator",y="keys",h="values",b=function(){return this};t.exports=function(t,n,e,x,m,g,w){a(e,n,x);var O,S,_,j=function(t){if(!d&&t in A)return A[t];switch(t){case y:return function(){return new e(this,t)};case h:return function(){return new e(this,t)}}return function(){return new e(this,t)}},P=n+" Iterator",E=m==h,M=!1,A=t.prototype,T=A[p]||A[v]||m&&A[m],L=T||j(m),N=m?E?j("entries"):L:void 0,C="Array"==n?A.entries||T:T;if(C&&(_=l(C.call(new t)),_!==Object.prototype&&(s(_,P,!0),r||f(_,p)||u(_,p,b))),E&&T&&T.name!==h&&(M=!0,L=function(){return T.call(this)}),r&&!w||!d&&!M&&A[p]||u(A,p,L),c[n]=L,c[P]=b,m)if(O={values:E?L:j(h),keys:g?L:j(y),entries:N},w)for(S in O)S in A||i(A,S,O[S]);else o(o.P+o.F*(d||M),n,O);return O}},function(t,n,e){var r=e(10),o=e(55),i=e(16),u=e(21)("IE_PROTO"),f=function(){},c="prototype",a=function(){var t,n=e(29)("iframe"),r=i.length,o="<",u=">";for(n.style.display="none",e(48).appendChild(n),n.src="javascript:",t=n.contentWindow.document,t.open(),t.write(o+"script"+u+"document.F=Object"+o+"/script"+u),t.close(),a=t.F;r--;)delete a[c][i[r]];return a()};t.exports=Object.create||function(t,n){var e;return null!==t?(f[c]=r(t),e=new f,f[c]=null,e[u]=t):e=a(),void 0===n?e:o(e,n)}},function(t,n,e){var r=e(35),o=e(16).concat("length","prototype");n.f=Object.getOwnPropertyNames||function(t){return r(t,o)}},function(t,n){n.f=Object.getOwnPropertySymbols},function(t,n,e){var r=e(2),o=e(3),i=e(45)(!1),u=e(21)("IE_PROTO");t.exports=function(t,n){var e,f=o(t),c=0,a=[];for(e in f)e!=u&&r(f,e)&&a.push(e);for(;n.length>c;)r(f,e=n[c++])&&(~i(a,e)||a.push(e));return a}},function(t,n,e){t.exports=e(5)},function(t,n,e){var r=e(15);t.exports=function(t){return Object(r(t))}},function(t,n,e){t.exports={default:e(41),__esModule:!0}},function(t,n,e){t.exports={default:e(42),__esModule:!0}},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}n.__esModule=!0;var o=e(39),i=r(o),u=e(38),f=r(u),c="function"==typeof f.default&&"symbol"==typeof i.default?function(t){return typeof t}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":typeof t};n.default="function"==typeof f.default&&"symbol"===c(i.default)?function(t){return"undefined"==typeof t?"undefined":c(t)}:function(t){return t&&"function"==typeof f.default&&t.constructor===f.default&&t!==f.default.prototype?"symbol":"undefined"==typeof t?"undefined":c(t)}},function(t,n,e){e(65),e(63),e(66),e(67),t.exports=e(14).Symbol},function(t,n,e){e(64),e(68),t.exports=e(26).f("iterator")},function(t,n){t.exports=function(t){if("function"!=typeof t)throw TypeError(t+" is not a function!");return t}},function(t,n){t.exports=function(){}},function(t,n,e){var r=e(3),o=e(61),i=e(60);t.exports=function(t){return function(n,e,u){var f,c=r(n),a=o(c.length),s=i(u,a);if(t&&e!=e){for(;a>s;)if(f=c[s++],f!=f)return!0}else for(;a>s;s++)if((t||s in c)&&c[s]===e)return t||s||0;return!t&&-1}}},function(t,n,e){var r=e(43);t.exports=function(t,n,e){if(r(t),void 0===n)return t;switch(e){case 1:return function(e){return t.call(n,e)};case 2:return function(e,r){return t.call(n,e,r)};case 3:return function(e,r,o){return t.call(n,e,r,o)}}return function(){return t.apply(n,arguments)}}},function(t,n,e){var r=e(9),o=e(34),i=e(19);t.exports=function(t){var n=r(t),e=o.f;if(e)for(var u,f=e(t),c=i.f,a=0;f.length>a;)c.call(t,u=f[a++])&&n.push(u);return n}},function(t,n,e){t.exports=e(1).document&&document.documentElement},function(t,n,e){var r=e(28);t.exports=Object("z").propertyIsEnumerable(0)?Object:function(t){return"String"==r(t)?t.split(""):Object(t)}},function(t,n,e){var r=e(28);t.exports=Array.isArray||function(t){return"Array"==r(t)}},function(t,n,e){"use strict";var r=e(32),o=e(12),i=e(20),u={};e(5)(u,e(7)("iterator"),function(){return this}),t.exports=function(t,n,e){t.prototype=r(u,{next:o(1,e)}),i(t,n+" Iterator")}},function(t,n){t.exports=function(t,n){return{value:n,done:!!t}}},function(t,n,e){var r=e(9),o=e(3);t.exports=function(t,n){for(var e,i=o(t),u=r(i),f=u.length,c=0;f>c;)if(i[e=u[c++]]===n)return e}},function(t,n,e){var r=e(13)("meta"),o=e(11),i=e(2),u=e(6).f,f=0,c=Object.isExtensible||function(){return!0},a=!e(8)(function(){return c(Object.preventExtensions({}))}),s=function(t){u(t,r,{value:{i:"O"+ ++f,w:{}}})},l=function(t,n){if(!o(t))return"symbol"==typeof t?t:("string"==typeof t?"S":"P")+t;if(!i(t,r)){if(!c(t))return"F";if(!n)return"E";s(t)}return t[r].i},p=function(t,n){if(!i(t,r)){if(!c(t))return!0;if(!n)return!1;s(t)}return t[r].w},d=function(t){return a&&v.NEED&&c(t)&&!i(t,r)&&s(t),t},v=t.exports={KEY:r,NEED:!1,fastKey:l,getWeak:p,onFreeze:d}},function(t,n,e){var r=e(6),o=e(10),i=e(9);t.exports=e(4)?Object.defineProperties:function(t,n){o(t);for(var e,u=i(n),f=u.length,c=0;f>c;)r.f(t,e=u[c++],n[e]);return t}},function(t,n,e){var r=e(19),o=e(12),i=e(3),u=e(24),f=e(2),c=e(30),a=Object.getOwnPropertyDescriptor;n.f=e(4)?a:function(t,n){if(t=i(t),n=u(n,!0),c)try{return a(t,n)}catch(t){}if(f(t,n))return o(!r.f.call(t,n),t[n])}},function(t,n,e){var r=e(3),o=e(33).f,i={}.toString,u="object"==typeof window&&window&&Object.getOwnPropertyNames?Object.getOwnPropertyNames(window):[],f=function(t){try{return o(t)}catch(t){return u.slice()}};t.exports.f=function(t){return u&&"[object Window]"==i.call(t)?f(t):o(r(t))}},function(t,n,e){var r=e(2),o=e(37),i=e(21)("IE_PROTO"),u=Object.prototype;t.exports=Object.getPrototypeOf||function(t){return t=o(t),r(t,i)?t[i]:"function"==typeof t.constructor&&t instanceof t.constructor?t.constructor.prototype:t instanceof Object?u:null}},function(t,n,e){var r=e(23),o=e(15);t.exports=function(t){return function(n,e){var i,u,f=String(o(n)),c=r(e),a=f.length;return c<0||c>=a?t?"":void 0:(i=f.charCodeAt(c),i<55296||i>56319||c+1===a||(u=f.charCodeAt(c+1))<56320||u>57343?t?f.charAt(c):i:t?f.slice(c,c+2):(i-55296<<10)+(u-56320)+65536)}}},function(t,n,e){var r=e(23),o=Math.max,i=Math.min;t.exports=function(t,n){return t=r(t),t<0?o(t+n,0):i(t,n)}},function(t,n,e){var r=e(23),o=Math.min;t.exports=function(t){return t>0?o(r(t),9007199254740991):0}},function(t,n,e){"use strict";var r=e(44),o=e(52),i=e(17),u=e(3);t.exports=e(31)(Array,"Array",function(t,n){this._t=u(t),this._i=0,this._k=n},function(){var t=this._t,n=this._k,e=this._i++;return!t||e>=t.length?(this._t=void 0,o(1)):"keys"==n?o(0,e):"values"==n?o(0,t[e]):o(0,[e,t[e]])},"values"),i.Arguments=i.Array,r("keys"),r("values"),r("entries")},function(t,n){},function(t,n,e){"use strict";var r=e(59)(!0);e(31)(String,"String",function(t){this._t=String(t),this._i=0},function(){var t,n=this._t,e=this._i;return e>=n.length?{value:void 0,done:!0}:(t=r(n,e),this._i+=t.length,{value:t,done:!1})})},function(t,n,e){"use strict";var r=e(1),o=e(2),i=e(4),u=e(27),f=e(36),c=e(54).KEY,a=e(8),s=e(22),l=e(20),p=e(13),d=e(7),v=e(26),y=e(25),h=e(53),b=e(47),x=e(50),m=e(10),g=e(3),w=e(24),O=e(12),S=e(32),_=e(57),j=e(56),P=e(6),E=e(9),M=j.f,A=P.f,T=_.f,L=r.Symbol,N=r.JSON,C=N&&N.stringify,k="prototype",F=d("_hidden"),q=d("toPrimitive"),I={}.propertyIsEnumerable,B=s("symbol-registry"),D=s("symbols"),W=s("op-symbols"),H=Object[k],K="function"==typeof L,R=r.QObject,J=!R||!R[k]||!R[k].findChild,U=i&&a(function(){return 7!=S(A({},"a",{get:function(){return A(this,"a",{value:7}).a}})).a})?function(t,n,e){var r=M(H,n);r&&delete H[n],A(t,n,e),r&&t!==H&&A(H,n,r)}:A,G=function(t){var n=D[t]=S(L[k]);return n._k=t,n},$=K&&"symbol"==typeof L.iterator?function(t){return"symbol"==typeof t}:function(t){return t instanceof L},z=function(t,n,e){return t===H&&z(W,n,e),m(t),n=w(n,!0),m(e),o(D,n)?(e.enumerable?(o(t,F)&&t[F][n]&&(t[F][n]=!1),e=S(e,{enumerable:O(0,!1)})):(o(t,F)||A(t,F,O(1,{})),t[F][n]=!0),U(t,n,e)):A(t,n,e)},Y=function(t,n){m(t);for(var e,r=b(n=g(n)),o=0,i=r.length;i>o;)z(t,e=r[o++],n[e]);return t},Q=function(t,n){return void 0===n?S(t):Y(S(t),n)},X=function(t){var n=I.call(this,t=w(t,!0));return!(this===H&&o(D,t)&&!o(W,t))&&(!(n||!o(this,t)||!o(D,t)||o(this,F)&&this[F][t])||n)},V=function(t,n){if(t=g(t),n=w(n,!0),t!==H||!o(D,n)||o(W,n)){var e=M(t,n);return!e||!o(D,n)||o(t,F)&&t[F][n]||(e.enumerable=!0),e}},Z=function(t){for(var n,e=T(g(t)),r=[],i=0;e.length>i;)o(D,n=e[i++])||n==F||n==c||r.push(n);return r},tt=function(t){for(var n,e=t===H,r=T(e?W:g(t)),i=[],u=0;r.length>u;)!o(D,n=r[u++])||e&&!o(H,n)||i.push(D[n]);return i};K||(L=function(){if(this instanceof L)throw TypeError("Symbol is not a constructor!");var t=p(arguments.length>0?arguments[0]:void 0),n=function(e){this===H&&n.call(W,e),o(this,F)&&o(this[F],t)&&(this[F][t]=!1),U(this,t,O(1,e))};return i&&J&&U(H,t,{configurable:!0,set:n}),G(t)},f(L[k],"toString",function(){return this._k}),j.f=V,P.f=z,e(33).f=_.f=Z,e(19).f=X,e(34).f=tt,i&&!e(18)&&f(H,"propertyIsEnumerable",X,!0),v.f=function(t){return G(d(t))}),u(u.G+u.W+u.F*!K,{Symbol:L});for(var nt="hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables".split(","),et=0;nt.length>et;)d(nt[et++]);for(var nt=E(d.store),et=0;nt.length>et;)y(nt[et++]);u(u.S+u.F*!K,"Symbol",{for:function(t){return o(B,t+="")?B[t]:B[t]=L(t)},keyFor:function(t){if($(t))return h(B,t);throw TypeError(t+" is not a symbol!")},useSetter:function(){J=!0},useSimple:function(){J=!1}}),u(u.S+u.F*!K,"Object",{create:Q,defineProperty:z,defineProperties:Y,getOwnPropertyDescriptor:V,getOwnPropertyNames:Z,getOwnPropertySymbols:tt}),N&&u(u.S+u.F*(!K||a(function(){var t=L();return"[null]"!=C([t])||"{}"!=C({a:t})||"{}"!=C(Object(t))})),"JSON",{stringify:function(t){if(void 0!==t&&!$(t)){for(var n,e,r=[t],o=1;arguments.length>o;)r.push(arguments[o++]);return n=r[1],"function"==typeof n&&(e=n),!e&&x(n)||(n=function(t,n){if(e&&(n=e.call(this,t,n)),!$(n))return n}),r[1]=n,C.apply(N,r)}}}),L[k][q]||e(5)(L[k],q,L[k].valueOf),l(L,"Symbol"),l(Math,"Math",!0),l(r.JSON,"JSON",!0)},function(t,n,e){e(25)("asyncIterator")},function(t,n,e){e(25)("observable")},function(t,n,e){e(62);for(var r=e(1),o=e(5),i=e(17),u=e(7)("toStringTag"),f=["NodeList","DOMTokenList","MediaList","StyleSheetList","CSSRuleList"],c=0;c<5;c++){var a=f[c],s=r[a],l=s&&s.prototype;l&&!l[u]&&o(l,u,a),i[a]=i.Array}},function(t,n){"use strict";var e={versions:function(){var t=window.navigator.userAgent;return{trident:t.indexOf("Trident")>-1,presto:t.indexOf("Presto")>-1,webKit:t.indexOf("AppleWebKit")>-1,gecko:t.indexOf("Gecko")>-1&&t.indexOf("KHTML")==-1,mobile:!!t.match(/AppleWebKit.*Mobile.*/),ios:!!t.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),android:t.indexOf("Android")>-1||t.indexOf("Linux")>-1,iPhone:t.indexOf("iPhone")>-1||t.indexOf("Mac")>-1,iPad:t.indexOf("iPad")>-1,webApp:t.indexOf("Safari")==-1,weixin:t.indexOf("MicroMessenger")==-1}}()};t.exports=e},function(t,n,e){"use strict";function r(t){return t&&t.__esModule?t:{default:t}}var o=e(40),i=r(o),u=function(){function t(t,n,e){return n||e?String.fromCharCode(n||e):o[t]||t}function n(t){return l[t]}var e=/&quot;|&lt;|&gt;|&amp;|&nbsp;|&apos;|&#(\d+);|&#(\d+)/g,r=/['<> "&]/g,o={"&quot;":'"',"&lt;":"<","&gt;":">","&amp;":"&","&nbsp;":" "},f=/\u00a0/g,c=/<br\s*\/?>/gi,a=/\r?\n/g,s=/\s/g,l={};for(var p in o)l[o[p]]=p;return o["&apos;"]="'",l["'"]="&#39;",{encode:function(t){return t?(""+t).replace(r,n).replace(a,"<br/>").replace(s,"&nbsp;"):""},decode:function(n){return n?(""+n).replace(c,"\n").replace(e,t).replace(f," "):""},encodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},encodeBase16forJSON:function(t){if(!t)return t;t=t.replace(/[\u4E00-\u9FBF]/gi,function(t){return escape(t).replace("%u","\\u")});for(var n=[],e=0,r=t.length;r>e;e++)n.push(t.charCodeAt(e).toString(16).toUpperCase());return n.join("")},decodeBase16:function(t){if(!t)return t;t+="";for(var n=[],e=0,r=t.length;r>e;e+=2)n.push(String.fromCharCode("0x"+t.slice(e,e+2)));return n.join("")},encodeObject:function(t){if(t instanceof Array)for(var n=0,e=t.length;e>n;n++)t[n]=u.encodeObject(t[n]);else if("object"==("undefined"==typeof t?"undefined":(0,i.default)(t)))for(var r in t)t[r]=u.encodeObject(t[r]);else if("string"==typeof t)return u.encode(t);return t},loadScript:function(t){var n=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(n),n.setAttribute("src",t)},addLoadEvent:function(t){var n=window.onload;"function"!=typeof window.onload?window.onload=t:window.onload=function(){n(),t()}}}}();t.exports=u},function(t,n){function e(t,n){t.classList?t.classList.add(n):t.className+=" "+n}t.exports=e},function(t,n){function e(t,n){if(t.classList)t.classList.remove(n);else{var e=new RegExp("(^|\\b)"+n.split(" ").join("|")+"(\\b|$)","gi");t.className=t.className.replace(e," ")}}t.exports=e},,,function(t,n){"use strict";function e(){var t=document.querySelector("#page-nav");if(t&&!document.querySelector("#page-nav .extend.prev")&&(t.innerHTML='<a class="extend prev disabled" rel="prev">&laquo; Prev</a>'+t.innerHTML),t&&!document.querySelector("#page-nav .extend.next")&&(t.innerHTML=t.innerHTML+'<a class="extend next disabled" rel="next">Next &raquo;</a>'),yiliaConfig&&yiliaConfig.open_in_new){var n=document.querySelectorAll(".article-entry a:not(.article-more-a)");n.forEach(function(t){t.setAttribute("target","_blank")})}var e=document.querySelector("#js-aboutme");e&&0!==e.length&&(e.innerHTML=e.innerText)}t.exports={init:e}},,,,,,,,,function(t,n){function e(t,n){if("string"==typeof n)return t.insertAdjacentHTML("afterend",n);var e=t.nextSibling;return e?t.parentNode.insertBefore(n,e):t.parentNode.appendChild(n)}t.exports=e}])</script><script src="/./main.2d7529.js"></script><script>!function(){var e=function(e){var t=document.createElement("script");document.getElementsByTagName("body")[0].appendChild(t),t.setAttribute("src",e)};e("/slider.885efe.js")}()</script>
+
+
+    
+<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
+  <div class="tools-nav header-menu">
+    
+    
+      
+      
+      
+    
+      
+      
+      
+    
+    
+
+    <ul style="width: 70%">
+    
+    
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      
+        
+      
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      
+        
+    </ul>
+  </div>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all" q-show="innerArchive">
+        <div class="search-wrap">
+          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
+          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
+          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
+        </div>
+        <div class="widget tagcloud search-tag">
+          <p class="search-tag-wording">tag:</p>
+          <label class="search-switch">
+            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
+          </label>
+          <ul class="article-tag-list" q-show="showTags">
+            
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="search-ul">
+          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
+            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
+            2、在根目录_config.yml里添加配置：
+<pre style="font-size: 12px;" q-show="jsonFail">
+  jsonContent:
+    meta: false
+    pages: false
+    posts:
+      title: true
+      date: true
+      path: true
+      text: true
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
+</pre>
+          </p>
+          <li class="search-li" q-repeat="items" q-show="isShow">
+            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
+            <p class="search-time">
+              <i class="icon-calendar icon"></i>
+              <span q-text="date|dateformat"></span>
+            </p>
+            <p class="search-tag">
+              <i class="icon-price-tags icon"></i>
+              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
+            </p>
+          </li>
+        </ul>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me" q-show="aboutme">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">张运燕 &lt;br&gt; 2013年毕业于邯郸大学 &lt;br&gt; 电子信息工程系 &lt;br&gt; 软件技术专业 &lt;br&gt; 很惭愧&lt;br&gt;很惭愧&lt;br&gt;很惭愧&lt;br&gt;很惭愧&lt;br&gt;只做了一点微小的工作！</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
