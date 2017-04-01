@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>zhangyy</title>
+  <title>less及less编译 | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="谈谈我理解的前端：这是我个人对前端的一些理解及看法，可能理解得不太到位，前端主要包括三门技术html、css及javascript(下称js)，其中以js为主为难。js很早就有了，开始的时候，还伴随着vbscript，死敌有applet(java的一种小程序),那时候，玩js的人会被其它编程的人看得很轻，觉得那不过是一种不完善的脚本语言，所以开始的时候用的并不多，特效什么的一般都applet来完成">
 <meta property="og:type" content="article">
-<meta property="og:title" content="zhangyy">
+<meta property="og:title" content="less及less编译">
 <meta property="og:url" content="http://yoursite.com/2017/04/01/谈谈我理解的前端/index.html">
 <meta property="og:site_name" content="zhangyy">
 <meta property="og:description" content="谈谈我理解的前端：这是我个人对前端的一些理解及看法，可能理解得不太到位，前端主要包括三门技术html、css及javascript(下称js)，其中以js为主为难。js很早就有了，开始的时候，还伴随着vbscript，死敌有applet(java的一种小程序),那时候，玩js的人会被其它编程的人看得很轻，觉得那不过是一种不完善的脚本语言，所以开始的时候用的并不多，特效什么的一般都applet来完成">
-<meta property="og:updated_time" content="2017-04-01T13:51:53.670Z">
+<meta property="og:updated_time" content="2017-04-01T13:53:51.092Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="less及less编译">
 <meta name="twitter:description" content="谈谈我理解的前端：这是我个人对前端的一些理解及看法，可能理解得不太到位，前端主要包括三门技术html、css及javascript(下称js)，其中以js为主为难。js很早就有了，开始的时候，还伴随着vbscript，死敌有applet(java的一种小程序),那时候，玩js的人会被其它编程的人看得很轻，觉得那不过是一种不完善的脚本语言，所以开始的时候用的并不多，特效什么的一般都applet来完成">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
@@ -170,9 +170,25 @@
             <article id="post-谈谈我理解的前端" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      less及less编译
+    </h1>
+  
+
+        
+        <a href="/2017/04/01/谈谈我理解的前端/" class="archive-article-date">
+  	<time datetime="2017-04-01T13:53:51.090Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="谈谈我理解的前端："><a href="#谈谈我理解的前端：" class="headerlink" title="谈谈我理解的前端："></a>谈谈我理解的前端：</h2><p>这是我个人对前端的一些理解及看法，可能理解得不太到位，前端主要包括三门技术html、css及javascript(下称js)，其中以js为主为难。js很早就有了，开始的时候，还伴随着vbscript，死敌有applet(java的一种小程序),那时候，玩js的人会被其它编程的人看得很轻，觉得那不过是一种不完善的脚本语言，所以开始的时候用的并不多，特效什么的一般都applet来完成。</p>
+<a id="more"></a>
 <p>1998年，js的旁肢ajax延生，开始几年知道的人还不多，过了几年后，人们发现ajax的无刷新交互效果很不错，当时还有相当一部份人觉得ajax是一门新的技术，做一网站，用ajax的和不用ajax的是截然的两种价位。用ajax，就必须涉及到js，这就引起了学js的热潮，个人觉得国内应该比较晚一点，估摸是在2004、2005年左右才掀起的热潮，到2008年，一个新的时尚职位名诞生：web前端！</p>
 <p>下面说说我对学js的一点看法：</p>
 <p>现在js框架很多，比如jquery、extjs等等，应该有尽有。但我觉得，学技术，最好从底层学起。<br>一是底层技术学好了，扩展的技术自然容易学到手。比如，你js很好，学jquery自然快，甚至不用学，看手册就大概明其理，用起来也不在话下。<br>二是，如先学框架，因为框架将底层的东西都封装好了，用起来会觉得好用，也不怎么用动脑子去理解什么原理，拿来就用，容易形成一种依赖性，到后面，发明自己有些东西不太能理解，又想看底层的东西，觉得自己忽然就很弱，心情波动太多，就不易再专心学底层的东西了，可能也学不进去了。<br>还有，学框架的东西，也就是学用人家设计好的方法，比如jquery的bind()方法，开始的版本都是这个，用来绑定事件，本人没深入了解过从哪个版本开始，建议用新的方法on()——还其它方法类似这改动，说这个是想说明，人家写的方法，你是永远学不完的，人家一改版一改动，你就得从头再学了，也就是被人家牵着走，还是底层的东西，基本上千百年都不会变。还有，jquery的fn(原型)扩展看上去是很好用，但是，fn太多，jquery就很臃肿，每个html元素也同样变得臃肿，效率不言而预了。</p>
