@@ -14,7 +14,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/05/创建对象方法/index.html">
 <meta property="og:site_name" content="zhangyy">
 <meta property="og:description" content="一字面量1234567891011var对象名=&amp;#123;属性名1：属性值,属性名2：属性值,函数名1:function(形参......)&amp;#123;函数体1&amp;#125;,函数名2:function(形参......)&amp;#123;函数体2&amp;#125;,&amp;#125;;var zjl=&amp;#123; name:&amp;quot;周杰伦&amp;quot;, gender:&amp;quot;male&amp;quot;, set">
-<meta property="og:updated_time" content="2017-04-05T07:44:38.534Z">
+<meta property="og:updated_time" content="2017-04-05T07:46:11.515Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何创建对象？">
 <meta name="twitter:description" content="一字面量1234567891011var对象名=&amp;#123;属性名1：属性值,属性名2：属性值,函数名1:function(形参......)&amp;#123;函数体1&amp;#125;,函数名2:function(形参......)&amp;#123;函数体2&amp;#125;,&amp;#125;;var zjl=&amp;#123; name:&amp;quot;周杰伦&amp;quot;, gender:&amp;quot;male&amp;quot;, set">
@@ -180,7 +180,7 @@
 
         
         <a href="/2017/04/05/创建对象方法/" class="archive-article-date">
-  	<time datetime="2017-04-05T07:44:38.533Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
+  	<time datetime="2017-04-05T07:46:11.514Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
 </a>
         
       </header>
@@ -188,6 +188,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var对象名=&#123;</div><div class="line">属性名1：属性值,</div><div class="line">属性名2：属性值,</div><div class="line">函数名1:function(形参......)&#123;函数体1&#125;,</div><div class="line">函数名2:function(形参......)&#123;函数体2&#125;,</div><div class="line">&#125;;</div><div class="line">var zjl=&#123;</div><div class="line"> name:&quot;周杰伦&quot;,</div><div class="line"> gender:&quot;male&quot;,</div><div class="line"> setAge:function(age)&#123;this.curage=age;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var对象名=newObject();</div><div class="line">varzjl=newObject();</div><div class="line">zjl.name=&quot;周杰伦&quot;;</div><div class="line">zjl.gender=&quot;male&quot;;</div><div class="line">zjl.setAge=function(age)&#123; this.curage=age;&#125;;</div></pre></td></tr></table></figure>
 <h1 id="二"><a href="#二" class="headerlink" title="二"></a>二</h1><h2 id="1-工厂模式"><a href="#1-工厂模式" class="headerlink" title="1.工厂模式"></a>1.工厂模式</h2><pre><code>function person(name, age, job) {
     var o = new Object();
