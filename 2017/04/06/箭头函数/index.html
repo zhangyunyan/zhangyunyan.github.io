@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>ES6箭头函数和function | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下">
+  <meta name="description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6箭头函数和function">
 <meta property="og:url" content="http://yoursite.com/2017/04/06/箭头函数/index.html">
 <meta property="og:site_name" content="zhangyy">
-<meta property="og:description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下">
-<meta property="og:updated_time" content="2017-04-06T15:32:08.094Z">
+<meta property="og:description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。">
+<meta property="og:updated_time" content="2017-04-06T15:45:39.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6箭头函数和function">
-<meta name="twitter:description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下">
+<meta name="twitter:description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -180,14 +180,20 @@
 
         
         <a href="/2017/04/06/箭头函数/" class="archive-article-date">
-  	<time datetime="2017-04-06T15:32:08.094Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
+  	<time datetime="2017-04-06T15:45:39.492Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="JavaScript-ES6箭头函数指南"><a href="#JavaScript-ES6箭头函数指南" class="headerlink" title="JavaScript ES6箭头函数指南"></a>JavaScript ES6箭头函数指南</h2><p>胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&gt;语法一样，共享this上下文。<br>箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下来，让我们来看几个详细的例子。</p>
+        <h2 id="JavaScript-ES6箭头函数指南"><a href="#JavaScript-ES6箭头函数指南" class="headerlink" title="JavaScript ES6箭头函数指南"></a>JavaScript ES6箭头函数指南</h2><p>胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&gt;语法一样，共享this上下文。</p>
+<a id="more"></a>
+<p>箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下来，让我们来看几个详细的例子。<br>新的函数语法<br>传统的JavaScript函数语法并没有提供任何的灵活性，每一次你需要定义一个函数时，你都必须输入function(){}。CoffeeScript如今之所以那么火，有一个不可忽略的原因就是它有更简洁的函数语法。更简洁的函数语法在有大量回调函数的场景下好处特别明显，让我们从一个Promise链的例子看起：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function getVerifiedToken(selector)&#123;</div><div class="line">    return getUsers(selector)</div><div class="line">    .then(function(users)&#123;returnusers[0];&#125;)</div><div class="line">    .then(verifyUser)</div><div class="line">    .then(function(user,verifiedToken)&#123;returnverifiedToken;&#125;)</div><div class="line">    .catch(function(err)&#123;log(err.stack);&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>以下是使用新的箭头函数语法进行重构后的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">functiongetVerifiedToken(selector)&#123;</div><div class="line">    return getUsers(selector)</div><div class="line">    .then(users=&gt;users[0])</div><div class="line">    .then(verifyUser)</div><div class="line">    .then((user,verifiedToken)=&gt;verifiedToken)</div><div class="line">    .catch(err=&gt;log(err.stack));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="以下是值得注意的几个要点："><a href="#以下是值得注意的几个要点：" class="headerlink" title="以下是值得注意的几个要点："></a>以下是值得注意的几个要点：</h4><p>function和{}都消失了，所有的回调函数都只出现在了一行里。当只有一个参数时，()也消失了（rest参数是一个例外，如(…args)=&gt;…）。当{}消失后，return关键字也跟着消失了。单行的箭头函数会提供一个隐式的return<br>（这样的函数在其他编程语言中常被成为lamda函数）。<br>这里再着重强调一下上述的最后一个要求。仅仅当箭头函数为单行的形式时，才会出现隐式的return。当箭头函数伴随着{}被声明，那么即使它是单行的，它也不会有隐式return：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">const getVerifiedToken=selector=&gt;&#123;</div><div class="line">    return getUsers()</div><div class="line">    .then(users=&gt;users[0])</div><div class="line">    .then(verifyUser)</div><div class="line">    .then((user,verifiedToken)=&gt;verifiedToken)</div><div class="line">    .catch(err=&gt;log(err.stack));</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>如果我们的函数内只有一条声明（statement），我们可以不写{}，这样看上去会和CoffeeScript中的函数非常相似：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">const getVerifiedToken=selector=&gt;</div><div class="line">getUsers()</div><div class="line">.then(users=&gt;users[0])</div><div class="line">.then(verifyUser)</div><div class="line">.then((user,verifiedToken)=&gt;verifiedToken)</div><div class="line">.catch(err=&gt;log(err.stack));</div></pre></td></tr></table></figure></p>
+<p>你没有看错，以上的例子是完全合法的ES6语法。当我们谈论只包含一条声明（statement）的箭头函数时，这并不意味着这条声明不能够分成多行写。<br>这里有一个坑，当忽略了{}后，我们该怎么返回空对象（{}）呢？<br>constemptyObject=()=&gt;{};<br>emptyObject();//?<br>不幸的是，空对象{}和空白函数代码块{}长得一模一样。。以上的例子中，emptyObject的{}会被解释为一个空白函数代码块，所以emptyObject()会返回undefined。如果要在箭头函数中明确地返回一个空对象，则你不得不将{}包含在一对圆括号中(({}))：<br>constemptyObject=()=&gt;({});<br>emptyObject();//{}<br>下面是一个更完整的例子：function(){return1;}<br>()=&gt;{return1;}<br>()=&gt;1<br>function(a){returna<em>2;}<br>(a)=&gt;{returna</em>2;}<br>(a)=&gt;a<em>2<br>a=&gt;a</em>2<br>function(a,b){returna<em>b;}<br>(a,b)=&gt;{returna</em>b;}<br>(a,b)=&gt;a*b<br>function(){returnarguments[0];}<br>(…args)=&gt;args[0]<br>()=&gt;{}//undefined<br>()=&gt;({})//{}<br>this<br>JavaScript中this的故事已经是非常古老了，每一个函数都有自己的上下文。以下例子的目的是使用jQuery来展示一个每秒都会更新的时钟：<br>$(‘.current-time’).each(function(){<br>setInterval(function(){<br>$(this).text(Date.now());<br>},1000);<br>});<br>当尝试在setInterval的回调中使用this来引用DOM元素时，很不幸，我们得到的只是一个属于回调函数自身上下文的this。一个通常的解决办法是定义一个that或者self变量：$(‘.current-time’).each(function(){<br>varself=this;setInterval(function(){<br>$(self).text(Date.now());<br>},1000);<br>});<br>但当使用胖箭头函数时，这个问题就不复存在了。因为它不产生属于它自己上下文的this：$(‘.current-time’).each(function(){<br>setInterval(()=&gt;$(this).text(Date.now()),1000);<br>});<br>arguments变量<br>箭头函数与普通函数还有一个区别就是，它没有自己的arguments变量：functionlog(msg){<br>constprint=()=&gt;console.log(arguments[0]);<br>print(<code>LOG:${msg}</code>);<br>}<br>log(‘hello’);//hello<br>再次重申，箭头函数没有属于自己的this和arguments。但是，你仍可以通过rest参数，来得到所有传入的参数数组：functionlog(msg){<br>constprint=(…args)=&gt;console.log(args[0]);<br>print(<code>LOG:${msg}</code>);<br>}<br>log(‘hello’);//LOG:hello<br>关于yield<br>箭头函数不能作为generator函数使用。<br>最后<br>箭头函数是我最喜欢的ES6特性之一。使用=&gt;来代替function是非常便捷的。但我也曾见过只使用=&gt;来声明函数的代码，我并不认为这是好的做法，因为=&gt;也提供了它区别于传<br>第5 / 6页<br>统function，其所独有的特性。我个人推荐，仅在你需要使用它提供的新特性时，才使用它：<br><br>当只有一条声明（statement）语句时，隐式return。需要使用到父作用域中的this。</p>
 
       
 
