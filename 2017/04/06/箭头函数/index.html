@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>zhangyy</title>
+  <title>ES6箭头函数和function | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangyy">
-<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+  <meta name="description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6箭头函数和function">
+<meta property="og:url" content="http://yoursite.com/2017/04/06/箭头函数/index.html">
 <meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下">
+<meta property="og:updated_time" content="2017-04-06T15:32:08.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="ES6箭头函数和function">
+<meta name="twitter:description" content="JavaScript ES6箭头函数指南胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&amp;gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&amp;gt;语法一样，共享this上下文。箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -163,34 +167,51 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-前端面试题整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-箭头函数" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/30/前端面试题整理/">问题整理</a>
+    <h1 class="article-title" itemprop="name">
+      ES6箭头函数和function
     </h1>
   
 
         
-        <a href="/2017/03/30/前端面试题整理/" class="archive-article-date">
-  	<time datetime="2017-03-30T08:17:55.320Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-30</time>
+        <a href="/2017/04/06/箭头函数/" class="archive-article-date">
+  	<time datetime="2017-04-06T15:32:08.094Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><h3 id="HTML，HTTP，web综合问题"><a href="#HTML，HTTP，web综合问题" class="headerlink" title="$HTML，HTTP，web综合问题"></a>$HTML，HTTP，web综合问题</h3><p><a href="https://github.com/WangXiZhu/frontend-interview-question">整理</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">1、前端需要注意哪些SEO</div><div class="line">2、&lt;img&gt;的title和alt有什么区别</div><div class="line">3、HTTP的几种请求方法用途</div><div class="line">4、从浏览器地址栏输入url到显示页面的步骤</div><div class="line">5、如何进行网站性能优化</div><div class="line">6、HTTP状态码及其含义</div><div class="line">7、语义化的理解</div><div class="line">8、介绍一下你对浏览器内核的理解</div><div class="line">9、html5有哪些新特性、移除了那些元素？</div><div class="line">10、HTML5的离线储存怎么使用，工作原理能不能解释一下？</div><div class="line">11、浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢</div><div class="line">12、请描述一下 cookies，sessionStorage 和 localStorage 的区别</div><div class="line">13、iframe有那些缺点？</div><div class="line">14、WEB标准以及W3C标准是什么?</div><div class="line">15、xhtml和html有什么区别?</div><div class="line">16、Doctype作用? 严格模式与混杂模式如何区分？它们有何意义?</div><div class="line">17、行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？行内元素和块级元素有什么区别？</div><div class="line">18、HTML全局属性(global attribute)有哪些</div><div class="line">19、Canvas和SVG有什么区别？</div><div class="line">20、HTML5 为什么只需要写 &lt;!DOCTYPE HTML&gt;？</div><div class="line">21、如何在页面上实现一个圆形的可点击区域？</div><div class="line">22、网页验证码是干嘛的，是为了解决什么安全问题</div></pre></td></tr></table></figure></p>
-        
-          <a class="article-more-a" href="/2017/03/30/前端面试题整理/#more">more >></a>
-        
+        <h2 id="JavaScript-ES6箭头函数指南"><a href="#JavaScript-ES6箭头函数指南" class="headerlink" title="JavaScript ES6箭头函数指南"></a>JavaScript ES6箭头函数指南</h2><p>胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&gt;语法一样，共享this上下文。<br>箭头函数的产生，主要由两个目的：更简洁的语法和与父作用域共享关键字this。接下来，让我们来看几个详细的例子。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -199,10 +220,6 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/30/前端面试题整理/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -210,7 +227,16 @@
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/05/创建对象方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何创建对象？</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -218,237 +244,10 @@
 
 
   
-    <article id="post-ES6中promise" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/28/ES6中promise/">ES6的promise</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/03/28/ES6中promise/" class="archive-article-date">
-  	<time datetime="2017-03-28T08:43:53.899Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是Promise"><a href="#什么是Promise" class="headerlink" title="什么是Promise"></a>什么是Promise</h2><p>Promise是异步编程的一种解决方案，比传统的解决方案——回调函数和事件——更合理和更强大。它由社区最早提出和实现，ES6将其写进了语言标准，统一了用法，原生提供了Promise对象。</p>
-        
-          <a class="article-more-a" href="/2017/03/28/ES6中promise/#more">more >></a>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/28/ES6中promise/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-ES6新特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/28/ES6新特性/">ES6新特性</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/28/ES6新特性/" class="archive-article-date">
-  	<time datetime="2017-03-28T08:41:25.910Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>一、作用域</p>
-<ul>
-<li>块级作用域</li>
-<li>块级变量let</li>
-<li>块级常量 const</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/03/28/ES6新特性/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/28/ES6新特性/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-markdown使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/28/markdown使用/">markdown使用</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/28/markdown使用/" class="archive-article-date">
-  	<time datetime="2017-03-28T07:29:02.205Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p><img src="../img/图片1.png" alt="Alt text" title="Optional title"></p>
-        
-          <a class="article-more-a" href="/2017/03/28/markdown使用/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/28/markdown使用/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-MVC和MVP及MVVM之间的关系" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/28/MVC和MVP及MVVM之间的关系/">MVC、MVP、MVVM之间的关系</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/28/MVC和MVP及MVVM之间的关系/" class="archive-article-date">
-  	<time datetime="2017-03-28T07:26:09.493Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="一、MVC"><a href="#一、MVC" class="headerlink" title="一、MVC"></a>一、MVC</h2><h3 id="什么是MVC"><a href="#什么是MVC" class="headerlink" title="什么是MVC"></a>什么是MVC</h3><ul>
-<li>MVC是一种模式，它将应用分为3个部分：数据（模型）、表现层（视图）、用户交互层（控制器）</li>
-<li>一个事件的处理大概是这样<ul>
-<li>用户和应用产生交互</li>
-<li>控制器的事件处理器被触发</li>
-<li>控制器从模型中请求数据，并将其交给视图</li>
-<li>视图将数据呈现给用户</li>
-</ul>
-</li>
-</ul>
-        
-          <a class="article-more-a" href="/2017/03/28/MVC和MVP及MVVM之间的关系/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/28/MVC和MVP及MVVM之间的关系/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -470,8 +269,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
