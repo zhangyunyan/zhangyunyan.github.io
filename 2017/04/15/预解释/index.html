@@ -6,14 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>zhangyy</title>
+  <title>预解释 | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangyy">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="1.预解释的作用1)可以了解不同情况，i值到底是什么？
+2）可以知道带var和不带var
+3)可以明白为何程序能正常执行？为何会报错？">
+<meta property="og:type" content="article">
+<meta property="og:title" content="预解释">
+<meta property="og:url" content="http://yoursite.com/2017/04/15/预解释/index.html">
 <meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="1.预解释的作用1)可以了解不同情况，i值到底是什么？
+2）可以知道带var和不带var
+3)可以明白为何程序能正常执行？为何会报错？">
+<meta property="og:image" content="http://yoursite.com/../../../../img/与解释1.png">
+<meta property="og:updated_time" content="2017-04-14T16:07:57.640Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="预解释">
+<meta name="twitter:description" content="1.预解释的作用1)可以了解不同情况，i值到底是什么？
+2）可以知道带var和不带var
+3)可以明白为何程序能正常执行？为何会报错？">
+<meta name="twitter:image" content="http://yoursite.com/../../../../img/与解释1.png">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -163,16 +175,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-预解释" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-预解释" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/15/预解释/">预解释</a>
+    <h1 class="article-title" itemprop="name">
+      预解释
     </h1>
   
 
@@ -188,124 +198,86 @@
         <h2 id="1-预解释的作用"><a href="#1-预解释的作用" class="headerlink" title="1.预解释的作用"></a>1.预解释的作用</h2><pre><code>1)可以了解不同情况，i值到底是什么？
 2）可以知道带var和不带var
 3)可以明白为何程序能正常执行？为何会报错？
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/04/15/预解释/#more">more >></a>
-        
-      
+</code></pre><a id="more"></a>
+<h2 id="2-什么是预解释："><a href="#2-什么是预解释：" class="headerlink" title="2.什么是预解释："></a>2.什么是预解释：</h2><pre><code>在当前作用域下，在JS代码执行之前，浏览器会对带var和带function的进行提前声明或定义；
+</code></pre><h2 id="3-带var和带function的声明和定义是不同的；"><a href="#3-带var和带function的声明和定义是不同的；" class="headerlink" title="3.带var和带function的声明和定义是不同的；"></a>3.带var和带function的声明和定义是不同的；</h2><pre><code>带var的：只声明不定义；告诉浏览器，有这么一个变量，但是并没有赋值
+带function的：声明+定义；不仅告诉浏览器，有这么一个变量，而且对变量进行了赋值；
+</code></pre><h2 id="4-作用域链"><a href="#4-作用域链" class="headerlink" title="4.作用域链:"></a>4.作用域链:</h2><pre><code>当函数被调用的时候，会形成一个私有作用域，看私有作用域中，是否存在私有变量A：
+1）如果有私有变量A：那么整个作用域中的A，跟外界没有任何关系；所有该作用域中的A，都是私有变量；
+2）如果没有私有变量A：就会往上级作用域进行查找，找到的话，直接用，找不到继续找，一直找到window还没有，就会报错！；
+</code></pre><h2 id="5-私有变量有两种："><a href="#5-私有变量有两种：" class="headerlink" title="5.私有变量有两种："></a>5.私有变量有两种：</h2><pre><code>1.当前作用域下带var的；
+2.形参；
+</code></pre><h2 id="6-函数执行有四步骤："><a href="#6-函数执行有四步骤：" class="headerlink" title="6.函数执行有四步骤："></a>6.函数执行有四步骤：</h2><pre><code>1.首先会形成一个私有作用域
+2.形参赋值
+3.与解释
+4.代码从上到下的执行；
+</code></pre><h2 id="7-带var和不带var的区别："><a href="#7-带var和不带var的区别：" class="headerlink" title="7.带var和不带var的区别："></a>7.带var和不带var的区别：</h2><pre><code>带var：1）在全局作用域下，变量相当于window的全局属性 2）带var会进行预解释
+不带var：1）相当于window的全局属性 2）重要：不带var不会进行预解释；
+</code></pre><h2 id="8-预解释无节操："><a href="#8-预解释无节操：" class="headerlink" title="8.预解释无节操："></a>8.预解释无节操：</h2><pre><code>1）只对等号左边带var的声明，但不定义；
+2）自执行函数不会进行预解释，只有执行到他的时候，声明+定义+调用同步完成
+3）已经声明过的变量，不会进行重复声明
+4）return后面的语句不会进行预解释，return下面的语句，虽然不执行，但会进行预解释；
+5）条件判断语句中：无论条件是否成立，都会进行预解释
+    警示：不要在条件判断语句中，写函数的定义阶段
+</code></pre><h2 id="9-在预解释的时候，函数的优先级-gt-变量"><a href="#9-在预解释的时候，函数的优先级-gt-变量" class="headerlink" title="9.在预解释的时候，函数的优先级&gt;变量"></a>9.在预解释的时候，函数的优先级&gt;变量</h2><h2 id="10-运算符的优先级："><a href="#10-运算符的优先级：" class="headerlink" title="10.运算符的优先级："></a>10.运算符的优先级：</h2><pre><code>算术运算符》比较运算符》逻辑运算符》赋值运算符，所以，以后遇到赋值的时候，一定要加括号；
+</code></pre><h2 id="11-内存和内存释放："><a href="#11-内存和内存释放：" class="headerlink" title="11.内存和内存释放："></a>11.内存和内存释放：</h2><pre><code>内存主要包含：堆内存和栈内存；
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+栈内存：全局作用域和私有作用域；
+作用：提供了一个供JS代码执行的环境；里面放的是基本数据类型的数据；
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/15/预解释/">展开全文 >></a>
-        </p>
-      
+堆内存：
+作用：就是用来存放引用数据类型的数据：
 
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+对象数据类型：存放的是属性名和属性值；
+函数数据类型：把函数体中的所有JS代码，作为字符串存在堆内存空间中
 
+内存释放：
+      堆内存的释放：让变量指向空指针；
+      var obj={key:value}; obj=null;
 
+      栈内存的释放：
+          全局作用域：形成：当浏览器加载完页面的时候，会形成一个供JS代码执行的全局作用域；
+                    释放：关闭页面、关闭浏览器；
 
+          私有作用域：形成：函数被调用的时候；
+              一般情况下，当函数执行完成的时候，都会默认进行释放，但是两种特殊情况除外：
+              1）不释放：当函数体中的任何东西，被外面的变量或者其他东西占用的时候，该函数不释放；
+              2）不立即释放:当函数执行完成的时候，返回一个需要执行的函数；需要等待所有的函数都执行完成的时候，该函数才能释放；
+</code></pre><h2 id="12-上级作用域："><a href="#12-上级作用域：" class="headerlink" title="12.上级作用域："></a>12.上级作用域：</h2><pre><code>跟函数在哪里调用无关，只跟该函数对应的堆内存在哪里开辟有关；
+</code></pre><h2 id="13-关于函数的几种写法："><a href="#13-关于函数的几种写法：" class="headerlink" title="13.关于函数的几种写法："></a>13.关于函数的几种写法：</h2><pre><code>1）var f=function (){alert(1)}
+2)f=function (){alert(1)}
+3)function f(){alert(1)}
+f();当f被调用的时候，以上三种的调用结果一样；不同的就是他们预解释不同；
+</code></pre><h2 id="14-和attribute的区别："><a href="#14-和attribute的区别：" class="headerlink" title="14. .和attribute的区别："></a>14. .和attribute的区别：</h2><pre><code>区别主要有两点：
+1）获取的时候：标签上如果设置了自定义属性，我们通过.拿不到自定义属性的值，但是通过obj.getAttribute()可以拿到；
+2）设置的时候：通过点设置的自定义属性，在标签上看不到，但是通过setAttribute设置的值，在标签上可以看到；
+注意事项：.和attribute不要混合使用；
+</code></pre><h2 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var n=12;</div><div class="line">function fn(n)&#123;</div><div class="line">    alert(n)//undefined</div><div class="line">    n=34;</div><div class="line">    alert(n)//34</div><div class="line">&#125;</div><div class="line">fn();</div><div class="line">alert(n)//12</div></pre></td></tr></table></figure>
+<p><img src="../../../../img/与解释1.png" alt="Alt text" title="Optional title"></p>
 
-
-
-
-
-  
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/14/git/">git</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/14/git/" class="archive-article-date">
-  	<time datetime="2017-04-14T05:33:23.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h1><h2 id="1-验证git是否安装成功："><a href="#1-验证git是否安装成功：" class="headerlink" title="1.验证git是否安装成功："></a>1.验证git是否安装成功：</h2><p>git –version   它可以打印出你的git版本</p>
-<h2 id="2-git配置–配置git用户名和邮箱："><a href="#2-git配置–配置git用户名和邮箱：" class="headerlink" title="2.git配置–配置git用户名和邮箱："></a>2.git配置–配置git用户名和邮箱：</h2><pre><code>git config --global user.name &quot;你的github用户名&quot;
-git config --global user.email &quot;你的github邮箱&quot;
-</code></pre>
-        
-          <a class="article-more-a" href="/2017/04/14/git/#more">more >></a>
-        
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/14/git/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-flex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/14/flex/">Flex布局语法</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/14/flex/" class="archive-article-date">
-  	<time datetime="2017-04-13T19:10:45.106Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>网页布局是css的一个重点应用。</p>
-<p>布局的传统解决方案，基于盒子模型，依赖display属性+position属性+float属性。他对于那些特殊的布局非常不方便，比如：垂直居中就不容易实现。</p>
-<p>2009年，w3c提出了一种新的方案——flex布局，可以简便、完整、响应式的实现各种页面布局。目前他已经得到了所以的浏览器的支持，这意味着，现在就能很安全的使用这项功能。</p>
-<p>flex布局将成为未来布局的首选方案，一下介绍他的语法和常见布局的flex写法。</p>
-        
-          <a class="article-more-a" href="/2017/04/14/flex/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -314,10 +286,6 @@ git config --global user.email &quot;你的github邮箱&quot;
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/14/flex/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
@@ -325,7 +293,16 @@ git config --global user.email &quot;你的github邮箱&quot;
   </div>
 </article>
 
-
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/04/14/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
@@ -333,117 +310,10 @@ git config --global user.email &quot;你的github邮箱&quot;
 
 
   
-    <article id="post-箭头函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/06/箭头函数/">ES6箭头函数和function</a>
-    </h1>
+    <div class="duoshuo"></div>
   
 
-        
-        <a href="/2017/04/06/箭头函数/" class="archive-article-date">
-  	<time datetime="2017-04-06T15:56:01.556Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="JavaScript-ES6箭头函数指南"><a href="#JavaScript-ES6箭头函数指南" class="headerlink" title="JavaScript ES6箭头函数指南"></a>JavaScript ES6箭头函数指南</h2><p>胖箭头函数（Fatarrowfunctions），又称箭头函数，是一个来自ECMAScript2015（又称ES6）的全新特性。有传闻说，箭头函数的语法=&gt;，是受到了CoffeeScript的影响，并且它与CoffeeScript中的=&gt;语法一样，共享this上下文。</p>
-        
-          <a class="article-more-a" href="/2017/04/06/箭头函数/#more">more >></a>
-        
-      
 
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/06/箭头函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-创建对象方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/05/创建对象方法/">如何创建对象？</a>
-    </h1>
-  
-
-        
-        <a href="/2017/04/05/创建对象方法/" class="archive-article-date">
-  	<time datetime="2017-04-05T07:46:11.514Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一"><a href="#一" class="headerlink" title="一"></a>一</h1><h2 id="字面量"><a href="#字面量" class="headerlink" title="字面量"></a>字面量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var对象名=&#123;</div><div class="line">属性名1：属性值,</div><div class="line">属性名2：属性值,</div><div class="line">函数名1:function(形参......)&#123;函数体1&#125;,</div><div class="line">函数名2:function(形参......)&#123;函数体2&#125;,</div><div class="line">&#125;;</div><div class="line">var zjl=&#123;</div><div class="line"> name:&quot;周杰伦&quot;,</div><div class="line"> gender:&quot;male&quot;,</div><div class="line"> setAge:function(age)&#123;this.curage=age;&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2017/04/05/创建对象方法/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/05/创建对象方法/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
 
 
           </div>
@@ -465,8 +335,8 @@ git config --global user.email &quot;你的github邮箱&quot;
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
