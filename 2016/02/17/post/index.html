@@ -8,25 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>上传博客 | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="npm node package mana
-安装完node后自带送一个npm
-安装前端包  bower
-安装后台包  npm">
+  <meta name="description" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="上传博客">
 <meta property="og:url" content="http://yoursite.com/2016/02/17/post/index.html">
 <meta property="og:site_name" content="zhangyy">
-<meta property="og:description" content="npm node package mana
-安装完node后自带送一个npm
-安装前端包  bower
-安装后台包  npm">
-<meta property="og:updated_time" content="2017-03-19T07:35:01.357Z">
+<meta property="og:description" content="hexo">
+<meta property="og:updated_time" content="2017-04-15T05:19:56.439Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="上传博客">
-<meta name="twitter:description" content="npm node package mana
-安装完node后自带送一个npm
-安装前端包  bower
-安装后台包  npm">
+<meta name="twitter:description" content="hexo">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -229,11 +220,25 @@
 <h2 id="重新生成"><a href="#重新生成" class="headerlink" title="重新生成"></a>重新生成</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo g</div></pre></td></tr></table></figure>
 <h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div><div class="line">第一次发布会生成.deploy_git文件</div></pre></td></tr></table></figure>
 <h2 id="一些常用的命令"><a href="#一些常用的命令" class="headerlink" title="一些常用的命令"></a>一些常用的命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hexo new &quot;postName&quot;    #新建文章  ..\_posts\222.md</div><div class="line">hexo new page &quot;pageName&quot;    #新建页面(文件夹)  ..\source\1111\index.md</div><div class="line">hexo generate #生成静态页面至public目录</div><div class="line">hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）</div><div class="line">hexo deploy #将.deploy目录部署到GitHub</div><div class="line">hexo help  #查看帮助</div><div class="line">hexo version  #查看Hexo的版本</div></pre></td></tr></table></figure>
-<h2 id="静态页-gh-pages"><a href="#静态页-gh-pages" class="headerlink" title="静态页 gh-pages"></a>静态页 gh-pages</h2><p>gh-pages分支的名字，提供静态页的展示</p>
-<p>初始化仓库<br>git init</p>
-<p>建立联系<br>git remote add origin </p>
-<p>创建并切换分支<br>git checkout -b gh-pagh<br>推送</p>
+<h2 id="静态页-gh-pages"><a href="#静态页-gh-pages" class="headerlink" title="静态页 gh-pages"></a>静态页 gh-pages</h2><pre><code>gh-pages分支的名字，提供静态页的展示
 
+初始化仓库
+git init
+
+建立联系
+git remote add origin
+
+创建并切换分支
+git checkout -b gh-pagh
+推送
+</code></pre><h2 id="hexo给文章它添加标签"><a href="#hexo给文章它添加标签" class="headerlink" title="hexo给文章它添加标签:"></a>hexo给文章它添加标签:</h2><pre><code>title: 文章标题
+date: 2016-06-01 23:47:44 文章生成時間
+categories: &quot;Hexo&quot;  文章分类目录
+tags: 文章标题
+     - 标签1
+     - 标签2
+ description: 对本文章的描述
+</code></pre>
       
 
       
@@ -262,7 +267,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/hexo/" class="article-tag-list-link color5">hexo</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -275,11 +302,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/04/17/jQuery/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/03/16/使用hexo换电脑怎么更新博客/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          jQuery
+          使用其他电脑是怎么对自己的hexo博客进行改动
         
       </div>
     </a>
@@ -377,7 +404,7 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color2">代码管理工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -385,7 +412,39 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">代码管理工具</a>
+                <a href="javascript:void(0)" class="js-tag color4">es6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">路由</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">哈希值</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js - js - 对象</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">对象</a>
               </li>
             
             <div class="clearfix"></div>
