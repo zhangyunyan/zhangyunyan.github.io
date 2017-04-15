@@ -185,30 +185,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="思想主要是建两个分支"><a href="#思想主要是建两个分支" class="headerlink" title="思想主要是建两个分支"></a>思想主要是建两个分支</h1><h2 id="一、关于搭建的流程"><a href="#一、关于搭建的流程" class="headerlink" title="一、关于搭建的流程"></a>一、关于搭建的流程</h2><pre><code>创建仓库，http://CrazyMilk.github.io；
-创建两个分支：master 与 hexo；
-设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；
-使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；
-在本地http://CrazyMilk.github.io文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;
-修改_config.yml中的deploy参数，分支应为master；
-依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；
-执行hexo g -d生成网站并部署到GitHub上。
-这样一来，在GitHub上的http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美( •̀ ω •́ )y！
-</code></pre><h2 id="二、关于日常的改动流程"><a href="#二、关于日常的改动流程" class="headerlink" title="二、关于日常的改动流程"></a>二、关于日常的改动流程</h2><pre><code>在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理。
-
-依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；
-然后才执行hexo g -d发布网站到master分支上。
-虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催….的情况，调转顺序就有问题了）。
-</code></pre><h2 id="三、本地资料丢失后的流程"><a href="#三、本地资料丢失后的流程" class="headerlink" title="三、本地资料丢失后的流程"></a>三、本地资料丢失后的流程</h2><pre><code>当重装电脑之后，或者想在其他电脑上修改博客，可以使用下列步骤：
-
-使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库（默认分支为hexo）；
-在本地新拷贝的http://CrazyMilk.github.io文件夹下通过Git bash依次执行下列指令：npm install hexo、npm install、npm install hexo-deployer-git（记得，不需要hexo init这条指令）。
-以上就是我采用的方法，虽说文字有点多，但是我个人觉得真的挺高效和简洁的。
-from 链接：https://www.zhihu.com/question/21193762/answer/79109280
-</code></pre><p>from 链接：<a href="http://blog.csdn.net/qq_25560423/article/details/53785707" target="_blank" rel="external">http://blog.csdn.net/qq_25560423/article/details/53785707</a></p>
-<p>from 链接：<a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="external">https://www.zhihu.com/question/21193762/answer/79109280</a></p>
-<p>from 链接：<a href="http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more" target="_blank" rel="external">http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#more</a></p>
-
+        <h1 id="思想主要是建两个分支"><a href="#思想主要是建两个分支" class="headerlink" title="思想主要是建两个分支"></a>思想主要是建两个分支</h1><h2 id="一、关于搭建的流程"><a href="#一、关于搭建的流程" class="headerlink" title="一、关于搭建的流程"></a>一、关于搭建的流程</h2>
+        
+          <a class="article-more-a" href="/2016/03/16/使用hexo换电脑怎么更新博客/#more">more >></a>
+        
       
 
       
@@ -424,31 +404,11 @@ from 链接：https://www.zhihu.com/question/21193762/answer/79109280
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">代码管理工具</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">路由</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">哈希值</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+                <a href="javascript:void(0)" class="js-tag color2">代码管理工具</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -460,11 +420,23 @@ from 链接：https://www.zhihu.com/question/21193762/answer/79109280
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js - js - 对象</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">对象</a>
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">路由</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">哈希值</a>
               </li>
             
             <div class="clearfix"></div>
