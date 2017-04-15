@@ -6,21 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>jQuery | zhangyy</title>
+  <title>git | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="核心
-找到所有p元素，并且这些元素都为div元素的子元素1$(&amp;quot;div&amp;gt;p&amp;quot;)">
+  <meta name="description" content="代码管理工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="jQuery">
-<meta property="og:url" content="http://yoursite.com/2016/04/17/jQuery/index.html">
+<meta property="og:title" content="git">
+<meta property="og:url" content="http://yoursite.com/2017/04/15/git/index.html">
 <meta property="og:site_name" content="zhangyy">
-<meta property="og:description" content="核心
-找到所有p元素，并且这些元素都为div元素的子元素1$(&amp;quot;div&amp;gt;p&amp;quot;)">
-<meta property="og:updated_time" content="2017-03-19T07:31:10.558Z">
+<meta property="og:description" content="代码管理工具">
+<meta property="og:updated_time" content="2017-04-15T05:06:00.431Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="jQuery">
-<meta name="twitter:description" content="核心
-找到所有p元素，并且这些元素都为div元素的子元素1$(&amp;quot;div&amp;gt;p&amp;quot;)">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="代码管理工具">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -170,110 +167,103 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-jQuery" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      jQuery
+      git
     </h1>
   
 
         
-        <a href="/2016/04/17/jQuery/" class="archive-article-date">
-  	<time datetime="2016-04-16T17:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-04-17</time>
+        <a href="/2017/04/15/git/" class="archive-article-date">
+  	<time datetime="2017-04-15T05:06:00.431Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="核心"><a href="#核心" class="headerlink" title="核心"></a>核心</h2><ul>
-<li>找到所有p元素，并且这些元素都为div元素的子元素<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&gt;p&quot;)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<a id="more"></a>
-<ul>
-<li><p>设置页面背景</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(document.body).css(&quot;background&quot;:&quot;red&quot;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>隐藏一个表单中所有元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(myForm.elements).hide()</div></pre></td></tr></table></figure>
-</li>
-<li><p>在文档的第一个表单中，查找所有单选按钮(即：type值为radio的input元素)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;input:radio&quot;,document.forms[0])</div></pre></td></tr></table></figure>
-</li>
-<li><p>在一个ajax返回的xml文档中，查找所有div元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;,xml.responseXML)</div></pre></td></tr></table></figure>
-</li>
-<li><p>动态创建一个 div 元素（以及其中的所有内容），并将它追加到 body 元素中。在这个函数的内部，是通过临时创建一个元素，并将这个元素的 innerHTML 属性设置为给定的标记字符串，来实现标记到 DOM 元素转换的。所以，这个函数既有灵活性，也有局限性。</p>
-</li>
-</ul>
-<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ul>
-<li><p>#id  id选择器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">查找 ID 为&quot;myDiv&quot;的元素:</div><div class="line">$(&quot;#myDiv&quot;);</div><div class="line">得到的结果:[ &lt;div id=&quot;myDiv&quot;&gt;id=&quot;myDiv&quot;&lt;/div&gt; ]</div><div class="line">查找含有特殊字符的元素:</div><div class="line">$(&quot;#foo\\[bar\\]&quot;)</div><div class="line">得到的结果:[ &lt;span id=&quot;foo[bar]&quot;&gt;&lt;/span&gt;]</div><div class="line">$(&quot;#foo\\.bar&quot;)</div><div class="line">得到的结果:[ &lt;span id=&quot;foo.bar&quot;&gt;&lt;/span&gt;]</div></pre></td></tr></table></figure>
-</li>
-<li><p>element  元素选择器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;div&quot;);</div><div class="line">得到的结果:[ &lt;div&gt;DIV1&lt;/div&gt;, &lt;div&gt;DIV2&lt;/div&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>.class  类选择器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;.myClass&quot;);</div><div class="line">得到的结果:[ &lt;div class=&quot;myClass&quot;&gt;div class=&quot;myClass&quot;&lt;/div&gt;, &lt;span class=&quot;myClass&quot;&gt;span class=&quot;myClass&quot;&lt;/span&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>*通配符选择器 得到所有的标签元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;*&quot;);</div><div class="line">得到的结果:[ &lt;div&gt;DIV&lt;/div&gt;, &lt;span&gt;SPAN&lt;/span&gt;, &lt;p&gt;P&lt;/p&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>parent &gt; child,在给定的父元素下匹配所有的子元素;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">parent可以为任何有效选择器，child用以匹配元素的选择器，并且它是第一个选择器的子元素</div><div class="line">得到的结果只能是form选择器的子元素，同一级的元素和孙子级的都得不到</div><div class="line">[ &lt;input name=&quot;name&quot; /&gt; ]</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;form &gt; input&quot;);</div></pre></td></tr></table></figure>
-<ul>
-<li>prev + next,匹配所有紧接在 prev 元素后的 next 元素;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">prev任何有效选择器，next匹配一个选择器，并且紧接着第一个选择器</div><div class="line">&lt;!--</div><div class="line">&lt;form&gt;</div><div class="line">  &lt;label&gt;Name:&lt;/label&gt;</div><div class="line">  &lt;input name=&quot;name&quot; /&gt;</div><div class="line">  &lt;fieldset&gt;</div><div class="line">      &lt;label&gt;Newsletter:&lt;/label&gt;</div><div class="line">      &lt;input name=&quot;newsletter&quot; /&gt;</div><div class="line"> &lt;/fieldset&gt;</div><div class="line">&lt;/form&gt;</div><div class="line">&lt;input name=&quot;none&quot; /&gt;</div><div class="line">--&gt;</div><div class="line">得到的结果：[ &lt;input name=&quot;name&quot; /&gt;, &lt;input name=&quot;newsletter&quot; /&gt; ]</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;label+input&quot;)</div></pre></td></tr></table></figure>
-<ul>
-<li>prev ~ siblings,匹配 prev 元素之后的所有 siblings 元素;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">prev为任何有效元素，siblings为一个选择器，并且是第一个选择器的同辈</div><div class="line">得到的结果：</div><div class="line">[ &lt;input name=&quot;none&quot; /&gt; ]</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(&quot;form~input&quot;);</div></pre></td></tr></table></figure>
-<ul>
-<li><p>:first获取匹配的第一个元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;li:first&quot;);</div><div class="line">得到的结果：[ &lt;li&gt;list item 1&lt;/li&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:not(selector)去除所有与给定选择器匹配的元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;!--</div><div class="line">    &lt;input name=&quot;apple&quot; /&gt;</div><div class="line">    &lt;input name=&quot;flower&quot; checked=&quot;checked&quot; /&gt;</div><div class="line">--&gt;</div><div class="line">$(&quot;input:not(:checked)&quot;)查找所有未选中的 input 元素</div><div class="line">得到的结果：[ &lt;input name=&quot;apple&quot; /&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:even匹配所有索引值为偶数的元素，从0开始计数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;tr:even&quot;)</div><div class="line">得到的结果：[ &lt;tr&gt;&lt;td&gt;Header 1&lt;/td&gt;&lt;/tr&gt;, &lt;tr&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:odd匹配所有索引值为奇数的元素，从0开始计数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;tr:odd&quot;);</div><div class="line">得到的结果:[ &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:eq(index)匹配一个给定索引值的元素，index从0开始计数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;tr:eq(1)&quot;)</div><div class="line">得到的结果：[ &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:gt(index)匹配所有大于给定索引值的元素，index从0开始计数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;tr:gt(0)&quot;)</div><div class="line">得到的结果：[ &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt;, &lt;tr&gt;&lt;td&gt;Value 2&lt;/td&gt;&lt;/tr&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:last获取匹配的最后一个元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;tr:last&quot;)</div><div class="line">得到的结果：[ &lt;li&gt;list item 5&lt;/li&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:lt(index)获取所有小于给定索引值的元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;tr:lt(2)&quot;)</div><div class="line">获取到的结果：[ &lt;tr&gt;&lt;td&gt;Header 1&lt;/td&gt;&lt;/tr&gt;, &lt;tr&gt;&lt;td&gt;Value 1&lt;/td&gt;&lt;/tr&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:header 匹配如：h1,h2,h3之类的标题元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(&quot;:header&quot;).css(&quot;background&quot;,&quot;#EEE&quot;)</div><div class="line">得到的结果：[ &lt;h1 style=&quot;background:#EEE;&quot;&gt;Header 1&lt;/h1&gt;, &lt;h2 style=&quot;background:#EEE;&quot;&gt;Header 2&lt;/h2&gt; ]</div></pre></td></tr></table></figure>
-</li>
-<li><p>:animated匹配所有正在执行动画效果的元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&quot;#run&quot;).click(function()&#123;</div><div class="line">    $(&quot;div:not(:animated)&quot;).animate(&#123;left:&quot;+=20&quot;&#125;,1000);</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-</li>
-<li><p>如果不确定返回的数据是jq对象还是js元素，可以alert一下，看返回的是object还是element，如果是object为jq元素，如果为element为js元素</p>
-</li>
-</ul>
-
+        <h1 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h1><h2 id="1-验证git是否安装成功："><a href="#1-验证git是否安装成功：" class="headerlink" title="1.验证git是否安装成功："></a>1.验证git是否安装成功：</h2><p>git –version   它可以打印出你的git版本</p>
+<h2 id="2-git配置–配置git用户名和邮箱："><a href="#2-git配置–配置git用户名和邮箱：" class="headerlink" title="2.git配置–配置git用户名和邮箱："></a>2.git配置–配置git用户名和邮箱：</h2><pre><code>git config --global user.name &quot;你的github用户名&quot;
+git config --global user.email &quot;你的github邮箱&quot;
+</code></pre><a id="more"></a>
+<h2 id="3-创建本地仓库，共三步："><a href="#3-创建本地仓库，共三步：" class="headerlink" title="3.创建本地仓库，共三步："></a>3.创建本地仓库，共三步：</h2><pre><code>1）创建一个本地的文件夹
+2）打开命令窗口：
+    1.git bash打开：鼠标右键，从右键的菜单中选择git bash
+    2.通过命令行窗口打开：左手按住shift,同时右手点击鼠标右键，选择在此处打开命令窗口
+3）git init命令，按回车键即可；
+</code></pre><h2 id="4-把本地仓库的内容推送到远程仓库："><a href="#4-把本地仓库的内容推送到远程仓库：" class="headerlink" title="4.把本地仓库的内容推送到远程仓库："></a>4.把本地仓库的内容推送到远程仓库：</h2><pre><code>1）创建自己的远程仓库：
+    1）点击右上角的+号，选择new repository 创建一个远程仓库
+    2）写上你仓库的名称
+    3）选择create repository
+2）连接远程仓库：
+    git remote add origin https://github.com/leilei1238/2344.git（远程通道地址）
+    git remote -v 可以查看你连接了哪些远程通道？
+3）工作流：
+    1.git add .
+    2.git commit -m&quot;这些写注释的内容&quot;
+    3.git push origin master
+注意：自己本地仓库中，一定要有内容；
+</code></pre><h2 id="5-把本地文件夹中的内容，提交到远程仓库"><a href="#5-把本地文件夹中的内容，提交到远程仓库" class="headerlink" title="5.把本地文件夹中的内容，提交到远程仓库"></a>5.把本地文件夹中的内容，提交到远程仓库</h2><pre><code>1）创建本地仓库：创建本地文件夹，并给里面创建内容，通过git init把他初始化为一个git可以管理的仓库
+2）创建远程仓库：
+    1）点击右上角的+号，选择new repository 创建一个远程仓库
+    2）写上你仓库的名称
+    3）选择create repository
+    4)链接远程仓库：git remote add origin 远程通道的地址；
+        查看是否链接上远程仓库：git remote -v
+        删除远程仓库的链接：git remote rm origin
+3）工作流：
+    1）git add .
+    2)git commit -m&quot;注释&quot;
+    3）git push origin master
+</code></pre><h2 id="6-学生如何down老师的讲义"><a href="#6-学生如何down老师的讲义" class="headerlink" title="6.学生如何down老师的讲义:"></a>6.学生如何down老师的讲义:</h2><pre><code>1)登录你们自己的github;然后在地址栏，粘贴老师的远程仓库地址：
+https://github.com/zhangyunyan/Javascript201612
+然后按回车键
+2）点击fork：把老师远程仓库的内容，拿到自己的远程仓库；
+3）拷贝自己远程仓库的地址：clone or download;
+4) 创建一个自己的本地仓库
+5)在命令行窗口中输入命令：git clone https://github.com/yanyan1238/Javascript201612.git
+</code></pre><h2 id="7-常用命令："><a href="#7-常用命令：" class="headerlink" title="7.常用命令："></a>7.常用命令：</h2><pre><code>1）ls（dir）:打印出当前文件夹下有哪些文件；
+2）cd 输入想要进去的文件夹名字的一部分+tab键，就可以进入该文件夹
+3)
+</code></pre><h2 id="8-更新老师的最新讲义："><a href="#8-更新老师的最新讲义：" class="headerlink" title="8.更新老师的最新讲义："></a>8.更新老师的最新讲义：</h2><pre><code>1）等待老师把讲义更新后；
+2）git remote update teacher(学生链接的老师远程通道的名称)
+3）git pull teacher master
+</code></pre><h2 id="9-组长提交作业："><a href="#9-组长提交作业：" class="headerlink" title="9.组长提交作业："></a>9.组长提交作业：</h2><pre><code>1）在同学文件夹下，放入自己组员的作业
+2）把自己本地的文件，上传到自己的远程:
+    git add .
+        也可以写成 git add -A
+    git commit -m&quot;new&quot;
+    git push origin master
+3）pull request请求：请求跟老师远程合并；
+    1.new pull request
+    2.create pull request
+</code></pre><h2 id="10-所有的操作流程"><a href="#10-所有的操作流程" class="headerlink" title="10.所有的操作流程"></a>10.所有的操作流程</h2><pre><code>1）做为老师-》先把自己本地仓库的内容上传到自己远程仓库
+    git add ./git add -A
+    git commit -m&quot;注释内容&quot;
+    git push origin master
+2)作为学生：
+    1.登录自己github,把老师发送的远程仓库地址，复制到自己github的地址栏，回车
+    2.fork
+    3.复制自己远程仓库的地址，然后通过命令克隆到本地
+    git clone 自己远程仓库的地址
+3）作为老师：当讲义内容更新的时候：还是把老师本地的内容更新到老师远程仓库
+4）作为学生：当老师讲义更新的时候：
+    git remote update teacher
+    git pull teacher master
+5)作为学生：如果想向老师提交自己本地的东西：
+    1.先把自己本地的内容上传到自己远程仓库
+    2.new pull request 发起一个新的合并请求
+      create pull request 请求合并，这里可以写上备注
+</code></pre><h1 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h1><h2 id="查看所在的分支"><a href="#查看所在的分支" class="headerlink" title="查看所在的分支"></a>查看所在的分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch</div></pre></td></tr></table></figure>
+<h2 id="查看所有的分支"><a href="#查看所有的分支" class="headerlink" title="查看所有的分支"></a>查看所有的分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git branch -a</div></pre></td></tr></table></figure>
+<h2 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout gh-pages</div></pre></td></tr></table></figure>
+<h2 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git add .</div><div class="line">git commit -m&quot;1&quot;</div></pre></td></tr></table></figure>
+<h2 id="推送到分支"><a href="#推送到分支" class="headerlink" title="推送到分支"></a>推送到分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git push origin gh-pages</div></pre></td></tr></table></figure>
       
 
       
@@ -302,7 +292,29 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">代码管理工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/代码管理工具/" class="article-tag-list-link color2">代码管理工具</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -315,18 +327,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2016/11/17/gulp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          gulp
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/17/post/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">上传博客</div>
+    <a href="/2017/04/15/前端Js框架汇总/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">前端Js框架汇总</div>
       <i class="icon-circle-right"></i>
     </a>
   
