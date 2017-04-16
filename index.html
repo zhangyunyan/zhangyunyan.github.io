@@ -178,14 +178,23 @@
 
         
         <a href="/2017/04/16/正则/" class="archive-article-date">
-  	<time datetime="2017-04-16T03:29:00.264Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
+  	<time datetime="2017-04-16T03:51:48.295Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="1-正则的方法："><a href="#1-正则的方法：" class="headerlink" title="1.正则的方法："></a>1.正则的方法：</h2><pre><code>1）reg.test() 校验-匹配的，返回的是布尔值
+2）reg.exec() 捕获-返回值数组，默认情况下，数组有三项，当有小分组的时候，小分组从第二项开始
+3）reg.lastIndex; 开始查找内容的位置的索引；
+</code></pre><h2 id="2-字符串方法："><a href="#2-字符串方法：" class="headerlink" title="2.字符串方法："></a>2.字符串方法：</h2><pre><code>1）match(); 把找到的符合正则的内容，以一个新数组的形式返回
+2）replace(); 可以通过arguments，拿到大正则和小分组，arguments的实现原理就是exec；
+3）split(reg);
+4)search(reg);
+</code></pre><h2 id="重复子项"><a href="#重复子项" class="headerlink" title="重复子项"></a>重复子项</h2><pre><code>\1：代表跟第一个小分组一模一样； \2:代表跟第二个小分组一模一样
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str=&apos;aaaabbbbbbccccccccccdddd&apos;;</div><div class="line">var reg=/(\w)\1+/g;    //重复第一个分组</div><div class="line">str.replace(reg,function()&#123;</div><div class="line">    console.log(arguments)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
       
 
       
@@ -648,7 +657,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">框架</a>
+                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,7 +665,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -664,11 +673,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">基础</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color3">基础</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -676,7 +685,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown使用</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -684,11 +693,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+                <a href="javascript:void(0)" class="js-tag color1">markdown使用</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color2">容易混淆 - prototype</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -696,7 +705,11 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color3">兼容</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">容易混淆 - 正则</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -712,11 +725,7 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">容易混淆 - prototype</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">容易混淆 - 正则</a>
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>
