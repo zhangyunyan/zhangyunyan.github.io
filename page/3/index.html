@@ -165,32 +165,36 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-ES6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/04/15/git/">git</a>
+      <a class="article-title" href="/2017/04/15/ES6/">ES6</a>
     </h1>
   
 
         
-        <a href="/2017/04/15/git/" class="archive-article-date">
-  	<time datetime="2017-04-15T05:06:00.431Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
+        <a href="/2017/04/15/ES6/" class="archive-article-date">
+  	<time datetime="2017-04-15T05:11:32.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git基本操作"><a href="#git基本操作" class="headerlink" title="git基本操作"></a>git基本操作</h1><h2 id="1-验证git是否安装成功："><a href="#1-验证git是否安装成功：" class="headerlink" title="1.验证git是否安装成功："></a>1.验证git是否安装成功：</h2><p>git –version   它可以打印出你的git版本</p>
-<h2 id="2-git配置–配置git用户名和邮箱："><a href="#2-git配置–配置git用户名和邮箱：" class="headerlink" title="2.git配置–配置git用户名和邮箱："></a>2.git配置–配置git用户名和邮箱：</h2><pre><code>git config --global user.name &quot;你的github用户名&quot;
-git config --global user.email &quot;你的github邮箱&quot;
-</code></pre>
+        <h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ul>
+<li>创建.gitignore 和 readme.md文件：touch .gitignore README.md</li>
+<li>初始化package.json文件</li>
+<li>npm install babel-cli babel-preset-es2015 –save-dev</li>
+<li>在package.json的scripts中配置：”dev”:”babel src -d dist -w”</li>
+<li>创建.babelrc文件：touch .babelrc; 在里面配置：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    &quot;presets&quot;:[&quot;es2015&quot;]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
         
-          <a class="article-more-a" href="/2017/04/15/git/#more">more >></a>
+          <a class="article-more-a" href="/2017/04/15/ES6/#more">more >></a>
         
       
 
@@ -204,7 +208,7 @@ git config --global user.email &quot;你的github邮箱&quot;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">代码管理工具</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
         		</li>
       		
 		</ul>
@@ -216,7 +220,7 @@ git config --global user.email &quot;你的github邮箱&quot;
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/代码管理工具/" class="article-tag-list-link color2">代码管理工具</a>
+        			<a href="/categories/es6/" class="article-tag-list-link color4">es6</a>
         		</li>
       		
 		</ul>
@@ -225,7 +229,7 @@ git config --global user.email &quot;你的github邮箱&quot;
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/04/15/git/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/04/15/ES6/">展开全文 >></a>
         </p>
       
 
@@ -642,15 +646,11 @@ git config --global user.email &quot;你的github邮箱&quot;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">框架</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">ES6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Flex</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -658,7 +658,7 @@ git config --global user.email &quot;你的github邮箱&quot;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
+                <a href="javascript:void(0)" class="js-tag color3">框架</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -666,11 +666,11 @@ git config --global user.email &quot;你的github邮箱&quot;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">markdown使用</a>
+                <a href="javascript:void(0)" class="js-tag color5">预编译器</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">预编译器</a>
+                <a href="javascript:void(0)" class="js-tag color2">jQuery</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -678,11 +678,15 @@ git config --global user.email &quot;你的github邮箱&quot;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">熟记于心 - prototype</a>
+                <a href="javascript:void(0)" class="js-tag color1">markdown使用</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">熟记于心 - prototype</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -698,10 +702,6 @@ git config --global user.email &quot;你的github邮箱&quot;
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">熟记于心 - 正则</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">js - 同步和异步</a>
               </li>
              
@@ -714,15 +714,19 @@ git config --global user.email &quot;你的github邮箱&quot;
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">熟记于心 - 正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">路由</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">哈希值</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
               </li>
             
             <div class="clearfix"></div>
