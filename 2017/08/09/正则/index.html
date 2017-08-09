@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2016/3 | zhangyy</title>
+  <title>正则 | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangyy">
-<meta property="og:url" content="http://yoursite.com/archives/2016/03/index.html">
+  <meta name="description" content="正则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="正则">
+<meta property="og:url" content="http://yoursite.com/2017/08/09/正则/index.html">
 <meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="正则">
+<meta property="og:updated_time" content="2017-08-09T00:57:23.058Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="正则">
+<meta name="twitter:description" content="正则">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -163,169 +167,124 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-正则" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      正则
+    </h1>
+  
+
+        
+        <a href="/2017/08/09/正则/" class="archive-article-date">
+  	<time datetime="2017-08-09T00:57:23.054Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-正则的方法："><a href="#1-正则的方法：" class="headerlink" title="1.正则的方法："></a>1.正则的方法：</h2><a id="more"></a>
+<pre><code>1）reg.test() 校验-匹配的，返回的是布尔值
+2）reg.exec() 捕获-返回值数组，默认情况下，数组有三项，当有小分组的时候，小分组从第二项开始
+3）reg.lastIndex; 开始查找内容的位置的索引；
+</code></pre><h2 id="2-字符串方法："><a href="#2-字符串方法：" class="headerlink" title="2.字符串方法："></a>2.字符串方法：</h2><pre><code>1）match(); 把找到的符合正则的内容，以一个新数组的形式返回
+2）replace(); 可以通过arguments，拿到大正则和小分组，arguments的实现原理就是exec；
+3）split(reg);
+4)search(reg);
+</code></pre><h2 id="重复子项"><a href="#重复子项" class="headerlink" title="重复子项"></a>重复子项</h2><pre><code>\1：代表跟第一个小分组一模一样； \2:代表跟第二个小分组一模一样
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var str=&apos;aaaabbbbbbccccccccccdddd&apos;;</div><div class="line">var reg=/(\w)\1+/g;    //重复第一个分组</div><div class="line">str.replace(reg,function()&#123;</div><div class="line">    console.log(arguments)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="3-正则：每个正则表达式都是由元字符和修饰符组成的"><a href="#3-正则：每个正则表达式都是由元字符和修饰符组成的" class="headerlink" title="3.正则：每个正则表达式都是由元字符和修饰符组成的"></a>3.正则：每个正则表达式都是由元字符和修饰符组成的</h2><h3 id="元字符：在两个-之间具有意义的一些字符"><a href="#元字符：在两个-之间具有意义的一些字符" class="headerlink" title="元字符：在两个//之间具有意义的一些字符"></a>元字符：在两个//之间具有意义的一些字符</h3><h4 id="1-具有特殊意义的元字符"><a href="#1-具有特殊意义的元字符" class="headerlink" title="1.具有特殊意义的元字符"></a>1.具有特殊意义的元字符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">\:转义字符</div><div class="line">^:以某一个元字符开始</div><div class="line">$:以某一个元字符结尾</div><div class="line">.:除了\n以外的任意字符</div><div class="line">\n:匹配一个换行符</div><div class="line">\s:匹配一个空白符(空格 制表符 换行符)</div><div class="line">\b:匹配一个边界符</div><div class="line">\w:数字字母下划线中的任意一个字符</div><div class="line">\d:0-9之间的数字</div><div class="line">\D:除了0-9之间的数字以外的任何字符</div></pre></td></tr></table></figure>
+<h4 id="2-代表出现次数的量词元字符"><a href="#2-代表出现次数的量词元字符" class="headerlink" title="2.代表出现次数的量词元字符"></a>2.代表出现次数的量词元字符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">*:出现0到多次</div><div class="line">+:出现1到多次</div><div class="line">?:出现0或1次</div><div class="line">&#123;n&#125;:出现n次</div><div class="line">&#123;n,&#125;:出现n到多次</div><div class="line">&#123;n,m&#125;:出现n到m次</div></pre></td></tr></table></figure>
+<h4 id="3"><a href="#3" class="headerlink" title="3. [ ] | ^"></a>3. [ ] | ^</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">x|y:x或y中的一个</div><div class="line">[xyz]:x或y或z中的一个</div><div class="line">[^xyz]:除了xyz三个以外的任何一个字符</div><div class="line">[a-z]:a-z之间的任意一个字符</div><div class="line">[^a-z]:除了a-z之间的任意一个字符</div></pre></td></tr></table></figure>
+<h4 id="4-修饰符"><a href="#4-修饰符" class="headerlink" title="4.修饰符"></a>4.修饰符</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">g:全局匹配</div><div class="line">i:忽略大小写</div><div class="line">m:各行匹配</div></pre></td></tr></table></figure>
+<h2 id="4-正则捕获具有懒惰性和贪婪性"><a href="#4-正则捕获具有懒惰性和贪婪性" class="headerlink" title="4.正则捕获具有懒惰性和贪婪性"></a>4.正则捕获具有懒惰性和贪婪性</h2><h3 id="懒惰性：每一次执行exec只捕获第一次匹配的内容，在不进行任何处理的情况下，再执行多次捕获，捕获到的还是第一个匹配的内容"><a href="#懒惰性：每一次执行exec只捕获第一次匹配的内容，在不进行任何处理的情况下，再执行多次捕获，捕获到的还是第一个匹配的内容" class="headerlink" title="懒惰性：每一次执行exec只捕获第一次匹配的内容，在不进行任何处理的情况下，再执行多次捕获，捕获到的还是第一个匹配的内容"></a>懒惰性：每一次执行exec只捕获第一次匹配的内容，在不进行任何处理的情况下，再执行多次捕获，捕获到的还是第一个匹配的内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">解决懒惰性方法：在正则末尾加g</div></pre></td></tr></table></figure>
+<h3 id="贪婪性：正则每次捕获都是按照最长的结果捕获的，例如2符合正则，2015也符合正则，默认捕获2015"><a href="#贪婪性：正则每次捕获都是按照最长的结果捕获的，例如2符合正则，2015也符合正则，默认捕获2015" class="headerlink" title="贪婪性：正则每次捕获都是按照最长的结果捕获的，例如2符合正则，2015也符合正则，默认捕获2015"></a>贪婪性：正则每次捕获都是按照最长的结果捕获的，例如2符合正则，2015也符合正则，默认捕获2015</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">解决贪婪性:在量词元字符后面加？</div></pre></td></tr></table></figure>
+<h2 id="5-在正则中作用"><a href="#5-在正则中作用" class="headerlink" title="5. ?在正则中作用"></a>5. ?在正则中作用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">普通元字符后面：代表出现0-多次</div><div class="line">量词元字符后面：取消捕获贪婪性</div><div class="line">(?:\d&#123;2&#125;):只匹配不捕获</div></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/17/创建对象方法/" class="archive-article-date">
-  	<time datetime="2016-03-16T19:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/17/创建对象方法/">如何创建对象？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">熟记于心 - 正则</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/js基础知识/" class="article-tag-list-link color2">js基础知识</a>
+        			<a href="/categories/正则/" class="article-tag-list-link color3">正则</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/17/九宫格/" class="archive-article-date">
-  	<time datetime="2016-03-16T19:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-17</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/17/九宫格/">css实现九宫格（兼容问题）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">兼容</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/css兼容问题/" class="article-tag-list-link color3">css兼容问题</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/16/使用hexo换电脑怎么更新博客/" class="archive-article-date">
-  	<time datetime="2016-03-15T19:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-03-16</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/16/使用hexo换电脑怎么更新博客/">使用其他电脑是怎么对自己的hexo博客进行改动</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/换电脑更改博客/" class="article-tag-list-link color3">换电脑更改博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/07/28/git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+  
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -348,8 +307,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
