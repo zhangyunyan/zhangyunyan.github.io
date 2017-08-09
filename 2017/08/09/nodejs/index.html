@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/3 | zhangyy</title>
+  <title>nodejs | zhangyy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="zhangyy">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+  <meta name="description" content="nodejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nodejs">
+<meta property="og:url" content="http://yoursite.com/2017/08/09/nodejs/index.html">
 <meta property="og:site_name" content="zhangyy">
+<meta property="og:description" content="nodejs">
+<meta property="og:updated_time" content="2017-08-09T02:05:53.626Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zhangyy">
+<meta name="twitter:title" content="nodejs">
+<meta name="twitter:description" content="nodejs">
   
     <link rel="alternative" href="/atom.xml" title="zhangyy" type="application/atom+xml">
   
@@ -163,124 +167,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-nodejs" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/21/路由/" class="archive-article-date">
-  	<time datetime="2017-03-21T04:54:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-21</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/21/路由/">路由</a>
+    <h1 class="article-title" itemprop="name">
+      nodejs
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/08/09/nodejs/" class="archive-article-date">
+  	<time datetime="2017-08-09T02:05:53.625Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-nodejs特点"><a href="#1-nodejs特点" class="headerlink" title="1.nodejs特点"></a>1.nodejs特点</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">1.它是一个Javascript运行环境</div><div class="line">2.依赖于Chrome V8引擎进行代码解释</div><div class="line">3.事件驱动</div><div class="line">4.非阻塞I/O</div><div class="line">5.轻量、可伸缩，适于实时数据交互应用</div><div class="line">6.单进程，单线程</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="2-Nodejs为什么选择javascript为载体语言"><a href="#2-Nodejs为什么选择javascript为载体语言" class="headerlink" title="2.Nodejs为什么选择javascript为载体语言"></a>2.Nodejs为什么选择javascript为载体语言</h2><ul>
+<li>事实上，在实现 Node.js 之初，作者 Ryan Dahl 并没有选择 JavaScript，他尝试过 C、Lua，皆因其欠缺一些高级语言的特性，如闭包、函数式编程，致使程序复杂，难以维护。</li>
+<li>而JavaScript 则是支持函数式编程范型的语言，很好地契合了 Node.js 基于事件驱动的编程模型。加之 Google 提供的 V8 引擎，使 JavaScript 语言的执行速度大大提高。</li>
+<li>最终呈现在我们面前的就成了 Node.js，而不是 Node.c，Node.lua 或其他语言的实现。</li>
+</ul>
+<h2 id="3-Node-js不是JS应用、而是JS运行平台"><a href="#3-Node-js不是JS应用、而是JS运行平台" class="headerlink" title="3.Node.js不是JS应用、而是JS运行平台"></a>3.Node.js不是JS应用、而是JS运行平台</h2><ul>
+<li>看到Node.js这个名字，初学者可能会误以为这是一个Javascript应用，事实上，Node.js采用C++语言编写而成，是一个Javascript的运行环境。</li>
+<li>Node.js采用了Google Chrome浏览器的V8引擎，性能很好，同时还提供了很多系统级的API，如文件操作、网络编程等。</li>
+<li>浏览器端的Javascript代码在运行时会受到各种安全性的限制，对客户系统的操作有限。相比之下，Node.js则是一个全面的后台运行时，为Javascript提供了其他语言能够实现的许多功能。</li>
+</ul>
+<h2 id="4-Node-js的特点"><a href="#4-Node-js的特点" class="headerlink" title="4.Node.js的特点"></a>4.Node.js的特点</h2><ul>
+<li>Node.js在设计上也是比较创新，它以单进程，单线程模式运行（这和Javascript的运行方式是一致的），事件驱动机制是Node.js通过内部单线程高效率地维护事件循环队列来实现的，没有多线程的资源占用和上下文切换，这意味着面对大规模的http请求，Node.js凭借事件驱动搞定一切，习惯了传统语言的网络服务开发人员可能对多线程并发和协作非常熟悉，但是面对Node.js，我们需要接受和理解它的特点。</li>
+</ul>
+<h2 id="5-什么是-Event-Loop"><a href="#5-什么是-Event-Loop" class="headerlink" title="5.什么是 Event Loop"></a>5.什么是 Event Loop</h2><ul>
+<li>Event Loop 是一个很重要的概念，指的是计算机系统的一种运行机制。想要理解Event Loop，就要从程序的运行模式讲起。运行以后的程序叫做进程（Process），一般情况下，一个进程一次只能执行一个任务。</li>
+<li>如果有很多任务需要执行，不外乎三种解决方法。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">（1）排队。因为一个进程一次只能执行一个任务，只好等前面的任务执行完了，再执行后面的任务。</div><div class="line">（2）新建进程。使用fork命令，为每个任务新建一个进程。</div><div class="line">（3）新建线程。因为进程太耗费资源，所以如今的程序往往允许一个进程包含多个线程，由线程去完成任务。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h4><pre><code>以JavaScript语言为例，它是一种单线程语言，所有任务都在一个线程上完成，即采用上面的第一种方法。一旦遇到大量任务或者遇到一个耗时的任务，网页就会出现&quot;假死&quot;，因为JavaScript停不下来，也就无法响应用户的行为。
+　　　　你也许会问，JavaScript为什么是单线程，难道不能实现为多线程吗？
+　　　　这跟历史有关系：
+　　　　　　JavaScript语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。那么，为什么JavaScript不能有多个线程呢？这样能提高效率啊。
+　　　　　　JavaScript的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。
+　　　　　　比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？
+　　　　　　所以，为了避免复杂性，从一诞生，JavaScript就是单线程，这已经成了这门语言的核心特征，将来也不会改变。
+　　　　　　为了利用多核CPU的计算能力，HTML5提出Web Worker标准，允许JavaScript脚本创建多个线程，但是子线程完全受主线程控制，且不得操作DOM。
+　　　　　　所以，这个新标准并没有改变JavaScript单线程的本质。
+　　　　
+</code></pre><ul>
+<li>回到EventLoop：<br>　　　　　　单线程就意味着，所有任务需要排队，前一个任务结束，才会执行后一个任务。如果前一个任务耗时很长，后一个任务就不得不一直等着。<br>　　　　　　如果排队是因为计算量大，CPU忙不过来，倒也算了，但是很多时候CPU是闲着的，因为IO设备（输入输出设备）很慢（比如Ajax操作从网络读取数据），不得不等着结果出来，再往下执行。<br>　　　　　　JavaScript语言的设计者意识到，这时主线程完全可以不管IO设备，挂起处于等待中的任务，先运行排在后面的任务。等到IO设备返回了结果，再回过头，把挂起的任务继续执行下去。<br>于是，所有任务可以分成两种，一种是同步任务（synchronous），另一种是异步任务（asynchronous）。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">同步任务指的是，在主线程上排队执行的任务，只有前一个任务执行完毕，才能执行后一个任务；</div><div class="line">异步任务指的是，不进入主线程、而进入&quot;任务队列&quot;（task queue）的任务，只有&quot;任务队列&quot;通知主线程，某个异步任务可以执行了，该任务才会进入主线程执行。</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>只要主线程空了，就会去读取”任务队列”，这就是JavaScript的运行机制。这个过程会不断重复。</p>
+<p>来源：<a href="http://www.jb51.net/article/59790.htm" target="_blank" rel="external">http://www.jb51.net/article/59790.htm</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">路由</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">哈希值</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">nodejs - nodejs</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/路由/" class="article-tag-list-link color3">路由</a>
+        			<a href="/categories/nodejs/" class="article-tag-list-link color2">nodejs</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/15/ES6新特性/" class="archive-article-date">
-  	<time datetime="2017-03-15T11:08:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/15/ES6新特性/">ES6新特性</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ES6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/ES6新特性/" class="article-tag-list-link color2">ES6新特性</a>
-        		</li>
-      		
-		</ul>
-	</div>
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/09/正则/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">正则</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
+
+
+
   
-  
-    </div></section>
+    <div class="duoshuo"></div>
   
 
-    
+
 
 
           </div>
@@ -303,8 +327,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
